@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on MS工坊</title>
+        <link>https://blog.minutesphinx.link/post/</link>
+        <description>Recent content in Posts on MS工坊</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MinuteSphinx</copyright>
+        <lastBuildDate>Tue, 24 Jun 2025 11:12:40 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Description</title>
+        <link>https://blog.minutesphinx.link/p/description/</link>
+        <pubDate>Tue, 24 Jun 2025 11:12:40 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/description/</guid>
+        <description>&lt;h1 id=&#34;关于博客&#34;&gt;关于博客
+&lt;/h1&gt;&lt;p&gt;在摇摇晃晃的写了很多很多文档之后，终于决定以后把自己写的文章都丢进博客里。&lt;/p&gt;
+&lt;p&gt;其实之前也不是没有过博客，但是主要问题是始终做不到持之以恒，最后文章丢的丢博客还没人看，服务器从WordPress到Ghost搭建假设玩到飞起最后博客没写多少，然后被家长push花了不少电费于是陷入持之以恒的焦虑中，就这样就荒废了。&lt;/p&gt;
+&lt;p&gt;但是Yuki出现了。某种意义上ta重新点燃了我写下点什么东西的热情，于是这篇文章和背后的博客就诞生了。急急忙忙买了域名就开始把自己之前写下的东西搬上来，最后发现自己写过的东西Yuki都写过一遍了，于是这里我会写点其他什么东西（嗯）。&lt;/p&gt;
+&lt;p&gt;总之对Yuki的感谢难以言表（嗯）。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MS工坊</title>
+        <link>https://blog.minutesphinx.link/</link>
+        <description>Recent content on MS工坊</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MinuteSphinx</copyright>
+        <lastBuildDate>Tue, 24 Jun 2025 11:12:40 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Description</title>
+        <link>https://blog.minutesphinx.link/p/description/</link>
+        <pubDate>Tue, 24 Jun 2025 11:12:40 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/description/</guid>
+        <description>&lt;h1 id=&#34;关于博客&#34;&gt;关于博客
+&lt;/h1&gt;&lt;p&gt;在摇摇晃晃的写了很多很多文档之后，终于决定以后把自己写的文章都丢进博客里。&lt;/p&gt;
+&lt;p&gt;其实之前也不是没有过博客，但是主要问题是始终做不到持之以恒，最后文章丢的丢博客还没人看，服务器从WordPress到Ghost搭建假设玩到飞起最后博客没写多少，然后被家长push花了不少电费于是陷入持之以恒的焦虑中，就这样就荒废了。&lt;/p&gt;
+&lt;p&gt;但是Yuki出现了。某种意义上ta重新点燃了我写下点什么东西的热情，于是这篇文章和背后的博客就诞生了。急急忙忙买了域名就开始把自己之前写下的东西搬上来，最后发现自己写过的东西Yuki都写过一遍了，于是这里我会写点其他什么东西（嗯）。&lt;/p&gt;
+&lt;p&gt;总之对Yuki的感谢难以言表（嗯）。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://blog.minutesphinx.link/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://blog.minutesphinx.link/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/links/</guid>
+        <description>&lt;h1 id=&#34;外链&#34;&gt;外链
+&lt;/h1&gt;&lt;p&gt;欢迎哦哇哦哦哦哦，总之这里是一些链接什么的，我也不清楚要干什么。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://blog.minutesphinx.link/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://blog.minutesphinx.link/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;这里是MinuteSphinx（She/Her），大部分时候简写为ms（小写的哟），也有其他名字（只有亲密的人才会知道哦）。&lt;/p&gt;
+&lt;p&gt;算是半个开发者，🇳🇱小留，EE专业学生，在学习很多东西，其中有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机图形学&lt;/li&gt;
+&lt;li&gt;软件逆向工程&lt;/li&gt;
+&lt;li&gt;Rust：一种很有意思的编程语言&lt;/li&gt;
+&lt;li&gt;Verilog和硬件：恐怕只能之后再学了&lt;/li&gt;
+&lt;li&gt;Flutter很有意思的GUI框架和编程模式&lt;/li&gt;
+&lt;li&gt;同时也在研究一些泛泛而谈的东西&lt;/li&gt;
+&lt;li&gt;函数范式编程（我想找个人教我Lisp啊啊啊啊啊&lt;/li&gt;
+&lt;li&gt;物理和数学&lt;/li&gt;
+&lt;li&gt;Android系统维护&lt;/li&gt;
+&lt;li&gt;控制理论，信号处理等等&lt;/li&gt;
+&lt;li&gt;机械设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ms很喜欢很喜欢打游戏，因此ADHD的ms有的时候会忘记正事。&lt;/p&gt;
+&lt;p&gt;这个站点是基本上纯静态的，实际上ms并不知道背后到底是啥架构，讨厌JavaScript和HTML的ms也不想知道。&lt;/p&gt;
+&lt;p&gt;不过这个站点之后的文章可能会附带一些webapp啥的，那些会使用egui搭建并且Host在ms的homelab上。&lt;/p&gt;
+&lt;p&gt;ms对于一些东西有天生的抵触，虽然我不会ban人但是我会很伤心😢所以放ms一马&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java和Java相关的东西（Kotlin除外）&lt;/li&gt;
+&lt;li&gt;C和C++&lt;/li&gt;
+&lt;li&gt;糟糕的代码&lt;/li&gt;
+&lt;li&gt;完全没有设计让初学者看懂的文档&lt;/li&gt;
+&lt;li&gt;傲慢的开发者&lt;/li&gt;
+&lt;li&gt;炫富，炫耀自己的Privilege&lt;/li&gt;
+&lt;li&gt;堆了不知道多少层的继承（因此不太喜欢OOP）&lt;/li&gt;
+&lt;li&gt;Apple相关设备（买不起啊啊啊）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前ms在干什么呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;想搞点钱钱来缓解焦虑&lt;/li&gt;
+&lt;li&gt;一个Vive Tracker的廉价复刻，或许做完之后能赚到大笔钱钱，就能解决朋友和自己的学费了呜呜。&lt;/li&gt;
+&lt;li&gt;Picokey的扩展版，加入指纹功能&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
