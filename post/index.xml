@@ -7,14 +7,180 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>MinuteSphinx</copyright>
-        <lastBuildDate>Wed, 25 Jun 2025 02:56:58 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Jun 2025 14:08:27 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>杜比视界杂谈</title>
+        <link>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;作者是一名目前正在gap的学生，金钱不多所以说是穷鬼们的。这套教程完全出于我在近三个月里摸爬滚打的半实战经验。可能有错漏之处敬请谅解。要是你反对我会哭然后在家门口抹眼泪上吊并且不会让你知道😢&lt;/p&gt;
+&lt;p&gt;此外我本人对于颜色，亮度，声音的敏感度不高，杜比的元数据是基本上没有对比看不出来的，所以说我是木耳朵木眼睛HiFi啥的求求你饶了我吧我真听不出来。&lt;/p&gt;
+&lt;p&gt;这套教程非常折腾，除了便宜以外我想不到比正经蓝光碟机+功放+电视+一堆音箱搞出来的家庭影院好在哪里，但是作为一个穷的揭不开锅的小留来说我愿意拿时间换钱，只要核心体验到了其他体验多糟糕都没有问题，因为我真的很穷。&lt;/p&gt;
+&lt;p&gt;我在这里很厚脸皮的向诸位阅读者们请求借用一些蓝光设备，如果我有幸得到了您的青睐我会付双程邮费借用这台设备一段时间，我会抱着感激之心将评测写在之后的文档里。当然我不是专业人士表达能力一团浆糊自己还是AuDHD，但是我觉得至少我能以一个初学者，一个菜鸟的地步写下完全主观的评测。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;什么是杜比&#34;&gt;什么是杜比？
+&lt;/h2&gt;&lt;p&gt;杜比是美国杜比实验室的注册商标，杜比是一套视听技术的**专有的，商业化的，实用的，**解决方案。&lt;/p&gt;
+&lt;p&gt;一般来说杜比包括以下几个部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;音效：Dolby Atmos(杜比全景声)和Dolby Digital(杜比数字)。两者有根本上的区别。&lt;/li&gt;
+&lt;li&gt;显示：Dolby Vision(杜比视界)一套用来显示高色域，高动态范围的编解码和显示方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;咱们先从杜比视界开始&#34;&gt;咱们先从杜比视界开始。
+&lt;/h2&gt;&lt;p&gt;说到杜比视界，就要提到双层杜比，还有什么真假双层杜比的讨论，然后淘宝上一些商家就开始混淆视听来尝试卖给顾客一堆奇怪的东西，这里我们不谈定义不比谁更真，咱们就提杜比视界的实现原理。&lt;/p&gt;
+&lt;h3 id=&#34;yuv格式&#34;&gt;YUV格式
+&lt;/h3&gt;&lt;p&gt;电脑屏幕上的每个像素点是RGB的。通过三个光源的叠加来显示各种颜色。但是RGB颜色有个相当尴尬的问题：它把亮度和颜色混在了单一的一个值里。看以下的图片你就明白了：调整单一滑块时，右边的图颜色和亮度都变了，天哪！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/RGB4e8ecf2b23065d18.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;RGB4e8ecf2b23065d18.gif&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;导致在这个上面单独调整亮度（想一下HDR）相当折磨，此外人类对于颜色的感知能力远小于亮度，很多压缩就无法进行了。&lt;/p&gt;
+&lt;p&gt;于是我们发明了YUV格式。Y代表亮度，UV是连在一起的不可分离的二维量，代表一种颜色。在这个时候，黑色和白色会被看作一种“颜色”，它们之间的区别只有亮度。&lt;/p&gt;
+&lt;h4 id=&#34;yuv4&#34;&gt;YUV4:?:?
+&lt;/h4&gt;&lt;p&gt;当我们发明了亮度之后，我们就可以对图像进行大幅度的压缩，人类对于色彩的敏感度远小于亮度，所以我们如果在色彩上偷一点懒就能解锁大量的存储空间。&lt;/p&gt;
+&lt;p&gt;一个很容易想到的第一个思路是用全量的分辨率保存亮度，而用较小的分辨率保存颜色。到底多小呢？&lt;/p&gt;
+&lt;p&gt;我们考虑在显示器上的八个像素，它们如此排列：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们都留下它我们得到的就是&lt;code&gt;YUV444&lt;/code&gt;：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528054833985.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528054833985.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一个4代表了有4列像素，第二个数字是第一行保留了多少像素的颜色，第三个数字代表第二行保留了多少像素的颜色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那什么是&lt;code&gt;YUV422&lt;/code&gt;呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055103054.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055103054.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一行和第二行都只剩下了两个像素。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那什么是&lt;code&gt;YUV420&lt;/code&gt;呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055307657.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055307657.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;等一下，为什么第二行没有了？显示器上的像素该怎么来呢？我们只好把上面的两个像素的颜色顺延到底下就可以了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055601032.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055601032.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;色彩深度&#34;&gt;色彩深度
+&lt;/h4&gt;&lt;p&gt;YUV实际上还是一个三元组，第一个数字代表亮度，第二和第三个数字代表颜色。那我们该怎么表示这个数字呢？&lt;/p&gt;
+&lt;p&gt;我们实际上采用无符号整型类型来表示。但是这个整型有多长呢？颜色是连续的，我们只能用不同密度的离散的点来表示这些颜色，所以有多密呢？&lt;/p&gt;
+&lt;p&gt;这样我们就能得到了常跟在各种显示器参数或者视频格式后的&lt;code&gt;8bit&lt;/code&gt;,&lt;code&gt;10bit&lt;/code&gt;和&lt;code&gt;12bit&lt;/code&gt;。它们代表这个设备或者这个视频的色彩可以有多细腻，分的有多细。&lt;/p&gt;
+&lt;h3 id=&#34;所以到底啥是杜比视界&#34;&gt;所以到底啥是杜比视界？
+&lt;/h3&gt;&lt;p&gt;大家都说杜比视界里原盘的杜比视界是最好最完整的，那么它是什么呢？实际上它由三个部分组成：&lt;/p&gt;
+&lt;h4 id=&#34;bl层&#34;&gt;BL层
+&lt;/h4&gt;&lt;p&gt;BL层可以理解为视频本体，它是一个&lt;code&gt;YUV 4:2:0 10bit&lt;/code&gt;格式的视频，兼容&lt;code&gt;HDR10+&lt;/code&gt;，塞进蓝光光驱配好地区解锁就能直接播放，这一步不涉及任何蓝光碟机之类的，即使你把蓝光光驱塞进电脑里也能直接播放。&lt;/p&gt;
+&lt;h4 id=&#34;el层&#34;&gt;EL层
+&lt;/h4&gt;&lt;p&gt;这个EL层是对BL层数据的补充，你可以理解为上面的&lt;code&gt;YUV4:2:0&lt;/code&gt;格式中额外的两个颜色像素，然后对于每个颜色像素和亮度像素的额外两位数据，就像是在小数点后额外增加了几位一样，它能把&lt;code&gt;YUV4:2:0 10bit&lt;/code&gt;的视频扩展为&lt;code&gt;YUV 4:2:2 12bit&lt;/code&gt;,&lt;/p&gt;
+&lt;p&gt;杜比公司通过绑定在处理器中的授权阻止了未授权的处理器解码EL层数据，这也是大家都说蓝光碟机（比如麦尼塔UDP900）的杜比是最好的原因。它们的每一台设备都要对杜比实验室交授权费，或许是这类碟机价格高昂的原因之一。&lt;/p&gt;
+&lt;h4 id=&#34;rpu&#34;&gt;RPU
+&lt;/h4&gt;&lt;p&gt;杜比公司称其为动态元数据，这个元数据包含了在视频的每一帧该如何把YUV的颜色和亮度数据映射到实际的屏幕上。它描述了如何渲染BL（和EL）层。这个RPU层是杜比视界的代表，没有它就没法叫杜比视界。&lt;/p&gt;
+&lt;h4 id=&#34;原盘和流媒体&#34;&gt;原盘和流媒体
+&lt;/h4&gt;&lt;p&gt;在不同设备上播放的杜比视界需要不同的标准，以适应不同的硬件~~（和经济和市场）~~需求。我们此处假定视频以&lt;code&gt;H265/HEVC&lt;/code&gt;编码：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们把BL和EL和RPU加在一起，那么我们就得到了&lt;code&gt;Profile7&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由以上三个叠加出来的&lt;code&gt;Profile7&lt;/code&gt;由于包含了三个流所以说具有&lt;code&gt;FEL&lt;/code&gt;特性，一般来说我们用&lt;code&gt;FEL&lt;/code&gt;代指&lt;code&gt;Profile7&lt;/code&gt;。一般来说我们听到了类似真双层杜比的说辞一般指的是&lt;code&gt;FEL&lt;/code&gt;。由于其中包含&lt;code&gt;EL&lt;/code&gt;层所以只有那些拥有授权的蓝光碟机才能播放。这种封装也只会出现在蓝光原盘里。注意Profile7并没有限制具体的文件格式，可能是从原盘拆出来的BDMV文件夹也可能是一个MKV容器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们把BL和RPU加在一起，我们就得到了&lt;code&gt;Profile5/8&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;具体是哪个封装格式依据设定的向下兼容能力而定，我们通常叫这个&lt;code&gt;MEL&lt;/code&gt;，有的时候也叫单层杜比。有些时候有些商家会用“伪双层杜比”来描述一种特定的行为：即把&lt;code&gt;Profile7&lt;/code&gt;封装中的EL层扔掉只保留BL和RPU。目前已知会这么做的是英伟达的Shield TV，有时也称神盾播放器。有的时候&lt;code&gt;Profile8&lt;/code&gt;后面会跟小数点，它们更进一步指出了向下兼容的能力。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Profile5/8&lt;/code&gt;会在流媒体里面出现，一般来说B站，Netflix，Youtube上杜比视界的都属于这类。Apple TV,没有魔改的电视盒子也只能播放此类。有的时候有些支持杜比的NAS播放器会丢弃Profile7里的EL层数据。&lt;/p&gt;
+&lt;h2 id=&#34;音频&#34;&gt;音频
+&lt;/h2&gt;&lt;p&gt;在这里我们谈的杜比音频仅限于你在家里能买到的最好的东西。至于影院级的我们不谈。&lt;/p&gt;
+&lt;h3 id=&#34;音响系统&#34;&gt;音响系统
+&lt;/h3&gt;&lt;p&gt;目前最常用的音响系统是7.1，5.1声道。5.1声道包含电视左右的两个扬声器，电视下的一个扬声器，观众左右的两个扬声器和电视底下的一个重低音，而7.1声道多出了观众背后的两个扬声器。&lt;/p&gt;
+&lt;p&gt;杜比全景声和DTS:X引入了天空音响系统。天空音响至多有4个，所以说是7.1.4或者5.1.4系统。&lt;/p&gt;
+&lt;h3 id=&#34;ac3和truehd&#34;&gt;AC3和TrueHD
+&lt;/h3&gt;&lt;p&gt;杜比的声音编码就是这两种，解码的能力开放。前者诞生于上个世纪，后者诞生在最近十年。&lt;/p&gt;
+&lt;p&gt;AC3若不加任何修饰至多5.1声道，E-AC3扩展能让它扩展到7.1声道。&lt;/p&gt;
+&lt;p&gt;TrueHD和AC3的区别在于TrueHD是无损的，也能支持到7.1声道。&lt;/p&gt;
+&lt;p&gt;这些编码虽说是专有的，但是并不像FEL一样绑定特殊的硬件。&lt;/p&gt;
+&lt;h3 id=&#34;杜比全景声&#34;&gt;杜比全景声
+&lt;/h3&gt;&lt;p&gt;如果往以上的声音编码中增加关于描述声音具体访问的信息的元数据，那我们就得到了Dolby Atmos，它能通过软件形式的编码虚拟出给天空扬声器的声音来驱动7.1.4声道，让观众更有沉浸感。&lt;/p&gt;
+&lt;h2 id=&#34;实战篇&#34;&gt;实战篇
+&lt;/h2&gt;&lt;p&gt;理论讲完了，接下来是实际篇，这篇文章的标题是穷鬼们的杜比攻略，所以我绝对不想让你买蓝光机的。&lt;/p&gt;
+&lt;h3 id=&#34;百密一疏&#34;&gt;百密一疏
+&lt;/h3&gt;&lt;p&gt;理论上杜比树立的专利壁垒牢不可破，尤其是针对FEL的绑死硬件的解码能力。但是这个世界上总有草台班子。有不太可靠的野史指出：由于Amlogic（常见译名晶晨）的生产线混乱，导致几个型号的芯片里被错误置入了FEL的解码能力，于是在一群热心的黑客们从各类蓝光机，机顶盒中拆出来的驱动的缝合怪中，第一个支持FEL解码的非蓝光机设备出现了：Ugoos AM6B+，其内置的芯片是s922x-j，后来有人陆续发现其他的晶晨芯片里也有这个漏洞，其中一个就是S905x4-j/k。&lt;/p&gt;
+&lt;p&gt;s905x4-j/k的破解比S922X-J晚很多，考虑到s922x-j的破解实在震撼了太多人，那些搭载该芯片的电视盒子价格飞升奇快无比，一开始的价格大概在450人民币左右，现在已经飞到了800甚至1k人民币。但是s905x4-j的电视盒子破解的太晚再加上本身中文圈子里的保有量太少没有得到什么关注，于是价格仍然没有什么起伏。&lt;/p&gt;
+&lt;p&gt;但是在前仆后继的网友的挖地三尺下还真捞出来这么一台设备，腾讯的极光盒子4Pro,不是5不是3不是4必须要是那个4Pro，采用s905x4-j处理器。支持u盘启动，有SPDIF输出和CEC遥控，一个USB2.0和一个3.0口，还支持HDMI2.1输出。&lt;/p&gt;
+&lt;p&gt;最重要的是在我在家当死肥宅撰写这篇文章的2025年5月28号，这台设备只卖350人民币。虽说如此这设备的兼容性一场灾难，除了CoreELEC系统支持一团糟以外遥控器，Wi-Fi，蓝牙支持全废了，并且还没办法刷机只能USB启动，但是它只卖350人民币啊！你还要啥自行车？&lt;/p&gt;
+&lt;h3 id=&#34;紧急救援&#34;&gt;紧急救援
+&lt;/h3&gt;&lt;p&gt;这些缺点还蛮烦人的，第一是遥控器，我个人是直接把PS5手柄接上去了，我个人建议你买一个廉价的无线USB Xbox手柄接上去，包能用的。在这里顺道吐槽一下，某些蓝光机的遥控器简直就像是驾驶超音速奶牛一样难用。而至于Wi-Fi和蓝牙。这个设备上有个千兆网口，然后你既然都来追求极致音效了为什么要用蓝牙呢？&lt;/p&gt;
+&lt;p&gt;如果你决定好要购买它，记得配一个好的U盘，读写速度差的U盘会直接导致系统反复卡死无响应，甚至直接黑屏。笔者的方案是买了个16G的傲腾塞进了U盘盒子里。至于速度？我没有测过但是这能用。咸鱼上有些店家会提前把芯片拆下来用烧录器刷好系统，虽然能启动但不保证能用。&lt;/p&gt;
+&lt;p&gt;现在停下来，如果你决定好了购买了，停止阅读，去买一个，等快递到了再读下半部分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;刷机不要晚上做除非想通宵&#34;&gt;刷机（不要晚上做除非想通宵）
+&lt;/h3&gt;&lt;p&gt;把U盘塞进电脑里，去装一个烧写工具比如Balena Etcher或者Rufus。从&lt;a class=&#34;link&#34; href=&#34;https://mega.nz/file/zMk2HYZa#cM_6ornJwNnUG8OmXSAk2mrp6oGJlyQ2bDaQlzdrjGc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;（感谢卡巴熊论坛封装）下载固件，然后再&lt;a class=&#34;link&#34; href=&#34;https://www.123865.com/s/QH32Td-1yKov&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载&lt;/a&gt;一个这个设备的设备树（抱歉，没有钱来买免登录流量包）。把固件用Rufus烧录进U盘里，然后插拔U盘就能看到电脑上出现了新的U盘分区。把根文件夹目录下的&lt;code&gt;dtb.img&lt;/code&gt;删掉，替换成我给出的设备树文件。这样，系统盘就做好了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/IMG_20250528_1126062.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IMG_20250528_1126062.jpg&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;把系统盘插进盒子的USB3.0口里，找一个足够长的针（不要用牙签，除非你想让它断掉拿不出来），捅进盒子的AV口里（不用担心搞坏掉，你大概用不到这个口了），然后插上网线和HDMI线还有键盘，轻轻试探针，你会感觉到一个按钮，保持它按下的同时插入电源线，直到屏幕上显示CoreELEC的logo就可以松开了。&lt;/p&gt;
+&lt;p&gt;第一次启动要等很久很久很久，你需要耐心等待，如果你的U盘不好，你有可能永远卡在这个阶段。然后进入系统之后直奔设置：系统：CoreELEC：你就能见到杜比选项了。这个系统搭载了CPM模块，能在显示设备不支持杜比的时候手动设置显示屏数据以已经完成了RPU色调映射的LLDV模式播放杜比视界，只需要把模式选择成Player LED即可。&lt;/p&gt;
+&lt;p&gt;挂载你NAS(什么？你都玩PT折腾家庭影院了还没有NAS？太强大了受我一拜)上的文件夹之后选择刷新即可，受系统和U盘限制，挂载之后刷新文件夹需要耗上很长一段时间，甚至有可能假死，但是只要刷新完了就可以了。&lt;/p&gt;
+&lt;p&gt;它可以播放常见的蓝光原盘文件，甚至是ISO格式的，可惜没有蓝光菜单（有人在攻关这个难题）。比起蓝光碟机硬盘播放器来说它支持读取NFO生成影片介绍，是难得的优势。&lt;/p&gt;
+&lt;h3 id=&#34;测试&#34;&gt;测试
+&lt;/h3&gt;&lt;p&gt;网上有一个&lt;code&gt;BL_EL.mkv&lt;/code&gt;文件，搜到之后可以试着用它播放一下，看不到杜比标也没关系，看完它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你能看见旋转的色彩：那么证明它能读取BL层&lt;/li&gt;
+&lt;li&gt;如果你能看见隐隐约约的模糊电影：那么证明它能解码EL层（不要用采集卡，你看不到的）。电影很不清晰，有些人感觉不到可以注意四周的边框。&lt;/li&gt;
+&lt;li&gt;如果你发觉色彩开始爆闪开始鬼畜：那么证明它能读取并正确处理RPU。（别担心，多鬼畜的爆闪都是正常的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个文件的原理是这样的：先生成一段旋转的色彩，再提取一段原盘电影的EL层覆盖上去，再故意生成了一个很鬼畜的RPU数据，然后把它们缝在一起生成了这段测试视频。&lt;/p&gt;
+&lt;h3 id=&#34;遗憾音效&#34;&gt;遗憾：音效
+&lt;/h3&gt;&lt;p&gt;想要杜比全景声需要7+1+4个音频线，但是这个设备上显然没有这类接口，你需要一个相当昂贵的功放。如果你只需要5.1环绕声倒是有类似的廉价功放，只需要几十几百块。&lt;/p&gt;
+&lt;p&gt;如果你购买了类似的设备，你需要在音频选项中开启直通模式，把这些数据直通给设备。可以选择通过HDMI或者通过S/PDIF接口，如果你想搞7.1.4杜比全景声的话只能使用HDMI接口了。看看你的电视支不支持eARC或者买一个HDMI分离器，这种东西不算贵，但是记得搞一个支持杜比全景声的。&lt;/p&gt;
+&lt;h2 id=&#34;结语我们真的需要走那么远吗&#34;&gt;结语：我们真的需要走那么远吗？
+&lt;/h2&gt;&lt;p&gt;如果你跟着我走到了这里，你大概已经拥有了一台堪比蓝光碟机的播放设备。你或许还想进一步往前走。我可以负责任的跟你说：这套系统的上线，若不计算神奇的玄学部分，和最高配的蓝光碟机和功放的组合同级。当然你还可以接着走下去，花上更多的时间翻阅资料查询各类设备的价格，甚至跟我一样开始读源代码编译固件，甚至制作一台开源硬件的7.1.4功放。大家都是发烧友，只不过咱们没那么花钱而已。&lt;/p&gt;
+&lt;p&gt;但是时间成本很重要，你也会有一天愿意搭建一台家庭影院，虽说这台设备很强大，但是它基本上并不怎么好用的CoreELEC系统也会让你大倒胃口，你或许愿意花上一些钱买下UDP900，只是觉得这台设备有专业性和保障，不需要那么多麻烦。&lt;/p&gt;
+&lt;p&gt;或许再退一步，或许有一天会发现缺了EL层的杜比视界居然也看不出来，然后彻底不再发烧。&lt;/p&gt;
+&lt;p&gt;祝大家玩的开心，折腾的爽。&lt;/p&gt;
+&lt;p&gt;这篇文章采用CC0协议发布，你可以自由处置该文章。话虽如此，我个人方面请求你尽量不要把它发到PT站论坛之外的地方。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Android刷机杂谈</title>
         <link>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</link>
         <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
         
         <guid>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;h1 id=&#34;heading&#34;&gt;
-&lt;/h1&gt;&lt;blockquote&gt;
+        <description>&lt;blockquote&gt;
 &lt;p&gt;这篇文章假定你已经会了以下的东西：基本的使用&lt;code&gt;adb sideload&lt;/code&gt;或者&lt;code&gt; fastboot update&lt;/code&gt;来刷机，知道什么是Custom Recovery以及对于第三方系统的基本了解。十分建议阅读一下Yuki写的&lt;a class=&#34;link&#34; href=&#34;https://obsp.de/p/moto-g53-penang-flashing-evolutionx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;刷机教程&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -38,7 +204,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;WIP，今天就写到这里&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;heading-1&#34;&gt;
+&lt;h4 id=&#34;heading&#34;&gt;
 &lt;/h4&gt;</description>
         </item>
         <item>

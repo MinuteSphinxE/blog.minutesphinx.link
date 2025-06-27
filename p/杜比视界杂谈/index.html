@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。\n">
+<title>杜比视界杂谈</title>
+
+<link rel='canonical' href='https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="杜比视界杂谈">
+<meta property='og:description' content=" 这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。\n">
+<meta property='og:url' content='https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/'>
+<meta property='og:site_name' content='MS工坊'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Legacy' /><meta property='article:published_time' content='2025-06-27T14:08:27&#43;08:00'/><meta property='article:modified_time' content='2025-06-27T14:08:27&#43;08:00'/>
+<meta name="twitter:title" content="杜比视界杂谈">
+<meta name="twitter:description" content=" 这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">MS工坊</a></h1>
+            <h2 class="site-description">不会熄灭的灯光</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://blog.minutesphinx.link/en/" >English</option>
+                                
+                                    <option value="https://blog.minutesphinx.link/" selected>中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#什么是杜比">什么是杜比？</a></li>
+    <li><a href="#咱们先从杜比视界开始">咱们先从杜比视界开始。</a>
+      <ol>
+        <li><a href="#yuv格式">YUV格式</a>
+          <ol>
+            <li><a href="#yuv4">YUV4:?:?</a></li>
+            <li><a href="#色彩深度">色彩深度</a></li>
+          </ol>
+        </li>
+        <li><a href="#所以到底啥是杜比视界">所以到底啥是杜比视界？</a>
+          <ol>
+            <li><a href="#bl层">BL层</a></li>
+            <li><a href="#el层">EL层</a></li>
+            <li><a href="#rpu">RPU</a></li>
+            <li><a href="#原盘和流媒体">原盘和流媒体</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#音频">音频</a>
+      <ol>
+        <li><a href="#音响系统">音响系统</a></li>
+        <li><a href="#ac3和truehd">AC3和TrueHD</a></li>
+        <li><a href="#杜比全景声">杜比全景声</a></li>
+      </ol>
+    </li>
+    <li><a href="#实战篇">实战篇</a>
+      <ol>
+        <li><a href="#百密一疏">百密一疏</a></li>
+        <li><a href="#紧急救援">紧急救援</a></li>
+        <li><a href="#刷机不要晚上做除非想通宵">刷机（不要晚上做除非想通宵）</a></li>
+        <li><a href="#测试">测试</a></li>
+        <li><a href="#遗憾音效">遗憾：音效</a></li>
+      </ol>
+    </li>
+    <li><a href="#结语我们真的需要走那么远吗">结语：我们真的需要走那么远吗？</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/">杜比视界杂谈</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 27, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 12 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p><strong>这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。</strong></p>
+<p>作者是一名目前正在gap的学生，金钱不多所以说是穷鬼们的。这套教程完全出于我在近三个月里摸爬滚打的半实战经验。可能有错漏之处敬请谅解。要是你反对我会哭然后在家门口抹眼泪上吊并且不会让你知道😢</p>
+<p>此外我本人对于颜色，亮度，声音的敏感度不高，杜比的元数据是基本上没有对比看不出来的，所以说我是木耳朵木眼睛HiFi啥的求求你饶了我吧我真听不出来。</p>
+<p>这套教程非常折腾，除了便宜以外我想不到比正经蓝光碟机+功放+电视+一堆音箱搞出来的家庭影院好在哪里，但是作为一个穷的揭不开锅的小留来说我愿意拿时间换钱，只要核心体验到了其他体验多糟糕都没有问题，因为我真的很穷。</p>
+<p>我在这里很厚脸皮的向诸位阅读者们请求借用一些蓝光设备，如果我有幸得到了您的青睐我会付双程邮费借用这台设备一段时间，我会抱着感激之心将评测写在之后的文档里。当然我不是专业人士表达能力一团浆糊自己还是AuDHD，但是我觉得至少我能以一个初学者，一个菜鸟的地步写下完全主观的评测。</p>
+</blockquote>
+<h2 id="什么是杜比">什么是杜比？
+</h2><p>杜比是美国杜比实验室的注册商标，杜比是一套视听技术的**专有的，商业化的，实用的，**解决方案。</p>
+<p>一般来说杜比包括以下几个部分：</p>
+<ul>
+<li>音效：Dolby Atmos(杜比全景声)和Dolby Digital(杜比数字)。两者有根本上的区别。</li>
+<li>显示：Dolby Vision(杜比视界)一套用来显示高色域，高动态范围的编解码和显示方案。</li>
+</ul>
+<h2 id="咱们先从杜比视界开始">咱们先从杜比视界开始。
+</h2><p>说到杜比视界，就要提到双层杜比，还有什么真假双层杜比的讨论，然后淘宝上一些商家就开始混淆视听来尝试卖给顾客一堆奇怪的东西，这里我们不谈定义不比谁更真，咱们就提杜比视界的实现原理。</p>
+<h3 id="yuv格式">YUV格式
+</h3><p>电脑屏幕上的每个像素点是RGB的。通过三个光源的叠加来显示各种颜色。但是RGB颜色有个相当尴尬的问题：它把亮度和颜色混在了单一的一个值里。看以下的图片你就明白了：调整单一滑块时，右边的图颜色和亮度都变了，天哪！</p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/RGB4e8ecf2b23065d18.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="RGB4e8ecf2b23065d18.gif"
+	
+	
+></p>
+<p>导致在这个上面单独调整亮度（想一下HDR）相当折磨，此外人类对于颜色的感知能力远小于亮度，很多压缩就无法进行了。</p>
+<p>于是我们发明了YUV格式。Y代表亮度，UV是连在一起的不可分离的二维量，代表一种颜色。在这个时候，黑色和白色会被看作一种“颜色”，它们之间的区别只有亮度。</p>
+<h4 id="yuv4">YUV4:?:?
+</h4><p>当我们发明了亮度之后，我们就可以对图像进行大幅度的压缩，人类对于色彩的敏感度远小于亮度，所以我们如果在色彩上偷一点懒就能解锁大量的存储空间。</p>
+<p>一个很容易想到的第一个思路是用全量的分辨率保存亮度，而用较小的分辨率保存颜色。到底多小呢？</p>
+<p>我们考虑在显示器上的八个像素，它们如此排列：</p>
+<p><strong>如果我们都留下它我们得到的就是<code>YUV444</code>：</strong></p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/image-20250528054833985.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250528054833985.png"
+	
+	
+></p>
+<p>第一个4代表了有4列像素，第二个数字是第一行保留了多少像素的颜色，第三个数字代表第二行保留了多少像素的颜色。</p>
+<p><strong>那什么是<code>YUV422</code>呢？</strong></p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/image-20250528055103054.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250528055103054.png"
+	
+	
+></p>
+<p>第一行和第二行都只剩下了两个像素。</p>
+<p><strong>那什么是<code>YUV420</code>呢？</strong></p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/image-20250528055307657.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250528055307657.png"
+	
+	
+></p>
+<p>等一下，为什么第二行没有了？显示器上的像素该怎么来呢？我们只好把上面的两个像素的颜色顺延到底下就可以了：</p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/image-20250528055601032.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250528055601032.png"
+	
+	
+></p>
+<h4 id="色彩深度">色彩深度
+</h4><p>YUV实际上还是一个三元组，第一个数字代表亮度，第二和第三个数字代表颜色。那我们该怎么表示这个数字呢？</p>
+<p>我们实际上采用无符号整型类型来表示。但是这个整型有多长呢？颜色是连续的，我们只能用不同密度的离散的点来表示这些颜色，所以有多密呢？</p>
+<p>这样我们就能得到了常跟在各种显示器参数或者视频格式后的<code>8bit</code>,<code>10bit</code>和<code>12bit</code>。它们代表这个设备或者这个视频的色彩可以有多细腻，分的有多细。</p>
+<h3 id="所以到底啥是杜比视界">所以到底啥是杜比视界？
+</h3><p>大家都说杜比视界里原盘的杜比视界是最好最完整的，那么它是什么呢？实际上它由三个部分组成：</p>
+<h4 id="bl层">BL层
+</h4><p>BL层可以理解为视频本体，它是一个<code>YUV 4:2:0 10bit</code>格式的视频，兼容<code>HDR10+</code>，塞进蓝光光驱配好地区解锁就能直接播放，这一步不涉及任何蓝光碟机之类的，即使你把蓝光光驱塞进电脑里也能直接播放。</p>
+<h4 id="el层">EL层
+</h4><p>这个EL层是对BL层数据的补充，你可以理解为上面的<code>YUV4:2:0</code>格式中额外的两个颜色像素，然后对于每个颜色像素和亮度像素的额外两位数据，就像是在小数点后额外增加了几位一样，它能把<code>YUV4:2:0 10bit</code>的视频扩展为<code>YUV 4:2:2 12bit</code>,</p>
+<p>杜比公司通过绑定在处理器中的授权阻止了未授权的处理器解码EL层数据，这也是大家都说蓝光碟机（比如麦尼塔UDP900）的杜比是最好的原因。它们的每一台设备都要对杜比实验室交授权费，或许是这类碟机价格高昂的原因之一。</p>
+<h4 id="rpu">RPU
+</h4><p>杜比公司称其为动态元数据，这个元数据包含了在视频的每一帧该如何把YUV的颜色和亮度数据映射到实际的屏幕上。它描述了如何渲染BL（和EL）层。这个RPU层是杜比视界的代表，没有它就没法叫杜比视界。</p>
+<h4 id="原盘和流媒体">原盘和流媒体
+</h4><p>在不同设备上播放的杜比视界需要不同的标准，以适应不同的硬件~~（和经济和市场）~~需求。我们此处假定视频以<code>H265/HEVC</code>编码：</p>
+<p><strong>如果我们把BL和EL和RPU加在一起，那么我们就得到了<code>Profile7</code>。</strong></p>
+<p>由以上三个叠加出来的<code>Profile7</code>由于包含了三个流所以说具有<code>FEL</code>特性，一般来说我们用<code>FEL</code>代指<code>Profile7</code>。一般来说我们听到了类似真双层杜比的说辞一般指的是<code>FEL</code>。由于其中包含<code>EL</code>层所以只有那些拥有授权的蓝光碟机才能播放。这种封装也只会出现在蓝光原盘里。注意Profile7并没有限制具体的文件格式，可能是从原盘拆出来的BDMV文件夹也可能是一个MKV容器。</p>
+<p><strong>如果我们把BL和RPU加在一起，我们就得到了<code>Profile5/8</code>。</strong></p>
+<p>具体是哪个封装格式依据设定的向下兼容能力而定，我们通常叫这个<code>MEL</code>，有的时候也叫单层杜比。有些时候有些商家会用“伪双层杜比”来描述一种特定的行为：即把<code>Profile7</code>封装中的EL层扔掉只保留BL和RPU。目前已知会这么做的是英伟达的Shield TV，有时也称神盾播放器。有的时候<code>Profile8</code>后面会跟小数点，它们更进一步指出了向下兼容的能力。</p>
+<p><code>Profile5/8</code>会在流媒体里面出现，一般来说B站，Netflix，Youtube上杜比视界的都属于这类。Apple TV,没有魔改的电视盒子也只能播放此类。有的时候有些支持杜比的NAS播放器会丢弃Profile7里的EL层数据。</p>
+<h2 id="音频">音频
+</h2><p>在这里我们谈的杜比音频仅限于你在家里能买到的最好的东西。至于影院级的我们不谈。</p>
+<h3 id="音响系统">音响系统
+</h3><p>目前最常用的音响系统是7.1，5.1声道。5.1声道包含电视左右的两个扬声器，电视下的一个扬声器，观众左右的两个扬声器和电视底下的一个重低音，而7.1声道多出了观众背后的两个扬声器。</p>
+<p>杜比全景声和DTS:X引入了天空音响系统。天空音响至多有4个，所以说是7.1.4或者5.1.4系统。</p>
+<h3 id="ac3和truehd">AC3和TrueHD
+</h3><p>杜比的声音编码就是这两种，解码的能力开放。前者诞生于上个世纪，后者诞生在最近十年。</p>
+<p>AC3若不加任何修饰至多5.1声道，E-AC3扩展能让它扩展到7.1声道。</p>
+<p>TrueHD和AC3的区别在于TrueHD是无损的，也能支持到7.1声道。</p>
+<p>这些编码虽说是专有的，但是并不像FEL一样绑定特殊的硬件。</p>
+<h3 id="杜比全景声">杜比全景声
+</h3><p>如果往以上的声音编码中增加关于描述声音具体访问的信息的元数据，那我们就得到了Dolby Atmos，它能通过软件形式的编码虚拟出给天空扬声器的声音来驱动7.1.4声道，让观众更有沉浸感。</p>
+<h2 id="实战篇">实战篇
+</h2><p>理论讲完了，接下来是实际篇，这篇文章的标题是穷鬼们的杜比攻略，所以我绝对不想让你买蓝光机的。</p>
+<h3 id="百密一疏">百密一疏
+</h3><p>理论上杜比树立的专利壁垒牢不可破，尤其是针对FEL的绑死硬件的解码能力。但是这个世界上总有草台班子。有不太可靠的野史指出：由于Amlogic（常见译名晶晨）的生产线混乱，导致几个型号的芯片里被错误置入了FEL的解码能力，于是在一群热心的黑客们从各类蓝光机，机顶盒中拆出来的驱动的缝合怪中，第一个支持FEL解码的非蓝光机设备出现了：Ugoos AM6B+，其内置的芯片是s922x-j，后来有人陆续发现其他的晶晨芯片里也有这个漏洞，其中一个就是S905x4-j/k。</p>
+<p>s905x4-j/k的破解比S922X-J晚很多，考虑到s922x-j的破解实在震撼了太多人，那些搭载该芯片的电视盒子价格飞升奇快无比，一开始的价格大概在450人民币左右，现在已经飞到了800甚至1k人民币。但是s905x4-j的电视盒子破解的太晚再加上本身中文圈子里的保有量太少没有得到什么关注，于是价格仍然没有什么起伏。</p>
+<p>但是在前仆后继的网友的挖地三尺下还真捞出来这么一台设备，腾讯的极光盒子4Pro,不是5不是3不是4必须要是那个4Pro，采用s905x4-j处理器。支持u盘启动，有SPDIF输出和CEC遥控，一个USB2.0和一个3.0口，还支持HDMI2.1输出。</p>
+<p>最重要的是在我在家当死肥宅撰写这篇文章的2025年5月28号，这台设备只卖350人民币。虽说如此这设备的兼容性一场灾难，除了CoreELEC系统支持一团糟以外遥控器，Wi-Fi，蓝牙支持全废了，并且还没办法刷机只能USB启动，但是它只卖350人民币啊！你还要啥自行车？</p>
+<h3 id="紧急救援">紧急救援
+</h3><p>这些缺点还蛮烦人的，第一是遥控器，我个人是直接把PS5手柄接上去了，我个人建议你买一个廉价的无线USB Xbox手柄接上去，包能用的。在这里顺道吐槽一下，某些蓝光机的遥控器简直就像是驾驶超音速奶牛一样难用。而至于Wi-Fi和蓝牙。这个设备上有个千兆网口，然后你既然都来追求极致音效了为什么要用蓝牙呢？</p>
+<p>如果你决定好要购买它，记得配一个好的U盘，读写速度差的U盘会直接导致系统反复卡死无响应，甚至直接黑屏。笔者的方案是买了个16G的傲腾塞进了U盘盒子里。至于速度？我没有测过但是这能用。咸鱼上有些店家会提前把芯片拆下来用烧录器刷好系统，虽然能启动但不保证能用。</p>
+<p>现在停下来，如果你决定好了购买了，停止阅读，去买一个，等快递到了再读下半部分。</p>
+<hr>
+<h3 id="刷机不要晚上做除非想通宵">刷机（不要晚上做除非想通宵）
+</h3><p>把U盘塞进电脑里，去装一个烧写工具比如Balena Etcher或者Rufus。从<a class="link" href="https://mega.nz/file/zMk2HYZa#cM_6ornJwNnUG8OmXSAk2mrp6oGJlyQ2bDaQlzdrjGc"  target="_blank" rel="noopener"
+    >这里</a>（感谢卡巴熊论坛封装）下载固件，然后再<a class="link" href="https://www.123865.com/s/QH32Td-1yKov"  target="_blank" rel="noopener"
+    >下载</a>一个这个设备的设备树（抱歉，没有钱来买免登录流量包）。把固件用Rufus烧录进U盘里，然后插拔U盘就能看到电脑上出现了新的U盘分区。把根文件夹目录下的<code>dtb.img</code>删掉，替换成我给出的设备树文件。这样，系统盘就做好了。</p>
+<p><img src="https://img.pterclub.com/images/2025/05/28/IMG_20250528_1126062.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="IMG_20250528_1126062.jpg"
+	
+	
+></p>
+<p>把系统盘插进盒子的USB3.0口里，找一个足够长的针（不要用牙签，除非你想让它断掉拿不出来），捅进盒子的AV口里（不用担心搞坏掉，你大概用不到这个口了），然后插上网线和HDMI线还有键盘，轻轻试探针，你会感觉到一个按钮，保持它按下的同时插入电源线，直到屏幕上显示CoreELEC的logo就可以松开了。</p>
+<p>第一次启动要等很久很久很久，你需要耐心等待，如果你的U盘不好，你有可能永远卡在这个阶段。然后进入系统之后直奔设置：系统：CoreELEC：你就能见到杜比选项了。这个系统搭载了CPM模块，能在显示设备不支持杜比的时候手动设置显示屏数据以已经完成了RPU色调映射的LLDV模式播放杜比视界，只需要把模式选择成Player LED即可。</p>
+<p>挂载你NAS(什么？你都玩PT折腾家庭影院了还没有NAS？太强大了受我一拜)上的文件夹之后选择刷新即可，受系统和U盘限制，挂载之后刷新文件夹需要耗上很长一段时间，甚至有可能假死，但是只要刷新完了就可以了。</p>
+<p>它可以播放常见的蓝光原盘文件，甚至是ISO格式的，可惜没有蓝光菜单（有人在攻关这个难题）。比起蓝光碟机硬盘播放器来说它支持读取NFO生成影片介绍，是难得的优势。</p>
+<h3 id="测试">测试
+</h3><p>网上有一个<code>BL_EL.mkv</code>文件，搜到之后可以试着用它播放一下，看不到杜比标也没关系，看完它：</p>
+<ul>
+<li>如果你能看见旋转的色彩：那么证明它能读取BL层</li>
+<li>如果你能看见隐隐约约的模糊电影：那么证明它能解码EL层（不要用采集卡，你看不到的）。电影很不清晰，有些人感觉不到可以注意四周的边框。</li>
+<li>如果你发觉色彩开始爆闪开始鬼畜：那么证明它能读取并正确处理RPU。（别担心，多鬼畜的爆闪都是正常的）</li>
+</ul>
+<p>这个文件的原理是这样的：先生成一段旋转的色彩，再提取一段原盘电影的EL层覆盖上去，再故意生成了一个很鬼畜的RPU数据，然后把它们缝在一起生成了这段测试视频。</p>
+<h3 id="遗憾音效">遗憾：音效
+</h3><p>想要杜比全景声需要7+1+4个音频线，但是这个设备上显然没有这类接口，你需要一个相当昂贵的功放。如果你只需要5.1环绕声倒是有类似的廉价功放，只需要几十几百块。</p>
+<p>如果你购买了类似的设备，你需要在音频选项中开启直通模式，把这些数据直通给设备。可以选择通过HDMI或者通过S/PDIF接口，如果你想搞7.1.4杜比全景声的话只能使用HDMI接口了。看看你的电视支不支持eARC或者买一个HDMI分离器，这种东西不算贵，但是记得搞一个支持杜比全景声的。</p>
+<h2 id="结语我们真的需要走那么远吗">结语：我们真的需要走那么远吗？
+</h2><p>如果你跟着我走到了这里，你大概已经拥有了一台堪比蓝光碟机的播放设备。你或许还想进一步往前走。我可以负责任的跟你说：这套系统的上线，若不计算神奇的玄学部分，和最高配的蓝光碟机和功放的组合同级。当然你还可以接着走下去，花上更多的时间翻阅资料查询各类设备的价格，甚至跟我一样开始读源代码编译固件，甚至制作一台开源硬件的7.1.4功放。大家都是发烧友，只不过咱们没那么花钱而已。</p>
+<p>但是时间成本很重要，你也会有一天愿意搭建一台家庭影院，虽说这台设备很强大，但是它基本上并不怎么好用的CoreELEC系统也会让你大倒胃口，你或许愿意花上一些钱买下UDP900，只是觉得这台设备有专业性和保障，不需要那么多麻烦。</p>
+<p>或许再退一步，或许有一天会发现缺了EL层的杜比视界居然也看不出来，然后彻底不再发烧。</p>
+<p>祝大家玩的开心，折腾的爽。</p>
+<p>这篇文章采用CC0协议发布，你可以自由处置该文章。话虽如此，我个人方面请求你尽量不要把它发到PT站论坛之外的地方。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/legacy/">Legacy</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 MinuteSphinx
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
