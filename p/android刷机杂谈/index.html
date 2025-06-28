@@ -420,14 +420,18 @@
 <p>但是战斗并没有停止，这些银行没有一个实在紧迫的原因阻止用户root(毕竟如果设备被入侵了损失的还是用户自己)。但是最大的威胁来自于各种流媒体提供商：如果在手机上播放的内容被dump下来，盗版的损失可就不计其数了。但是这个事情实在反直觉：毕竟既然要在用户的设备屏幕上放，那怎么阻止未经授权的转录呢？我们该如何寻找一种行之有效的方法，绝对断定用户的设备有没有遭篡改呢？既然用户的设备已经root，用户可以基于用户知道的东西伪造任何一条请求。所以我们需要让用户的设备提供一种用户自己不知道，但是用户的设备知道的信息。</p>
 <p>于是Play-integrity诞生了，在TEE之内存在的私钥和证书由厂商经过Google授权签发。Play-integrity是Google服务器对设备TEE的一种挑战：要求它查询设备有没有被篡改，并且用由Google签发的证书和私钥来证明自己的真实性。真实性的验证不发生在设备上，而是服务器上。这样，KernelSU用尽浑身解数都无法获取这个硬件上隔离的证书和私钥，由于TEE的硬件级权限又无法阻止TEE获取信息。理论上就无敌了。</p>
 <p>可是</p>
-<p><img src="C:%5cUsers%5cMinuteSphinx%5cDesktop%5cBLOG%5ccontent%5cpost%5candroid-advanced%5cimage-20250628123256637.png"
-	
-	
-	
+<p><img src="/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637.png"
+	width="1362"
+	height="112"
+	srcset="/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu10265052675397196317.png 480w, /p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu3580325027836855039.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250628123256637"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="1216"
+		data-flex-basis="2918px"
 	
 ></p>
 <p>这套系统里最不安全的还是人。</p>
