@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>MS工坊</title>
-        <link>https://blog.minutesphinx.link/</link>
-        <description>Recent content on MS工坊</description>
+        <title>各类设备折腾 on MS工坊</title>
+        <link>https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/</link>
+        <description>Recent content in 各类设备折腾 on MS工坊</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>by MinuteSphinx CC0</copyright>
-        <lastBuildDate>Fri, 27 Jun 2025 14:08:27 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Jun 2025 14:08:27 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>杜比视界杂谈</title>
         <link>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</link>
         <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
@@ -172,154 +172,6 @@
 &lt;p&gt;或许再退一步，或许有一天会发现缺了EL层的杜比视界居然也看不出来，然后彻底不再发烧。&lt;/p&gt;
 &lt;p&gt;祝大家玩的开心，折腾的爽。&lt;/p&gt;
 &lt;p&gt;这篇文章采用CC0协议发布，你可以自由处置该文章。话虽如此，我个人方面请求你尽量不要把它发到PT站论坛之外的地方。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Android刷机杂谈</title>
-        <link>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</link>
-        <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;img src="https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/cover.webp" alt="Featured image of post Android刷机杂谈" /&gt;&lt;blockquote&gt;
-&lt;p&gt;这篇文章假定你已经会了以下的东西：基本的使用&lt;code&gt;adb sideload&lt;/code&gt;或者&lt;code&gt; fastboot update&lt;/code&gt;来刷机，知道什么是Custom Recovery以及对于第三方系统的基本了解。十分建议阅读一下Yuki写的&lt;a class=&#34;link&#34; href=&#34;https://obsp.de/p/moto-g53-penang-flashing-evolutionx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;刷机教程&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;android系统如何启动&#34;&gt;Android系统如何启动
-&lt;/h2&gt;&lt;p&gt;笔者的知识仅限于高通设备，不过MediaTek的设备大同小异。&lt;/p&gt;
-&lt;h3 id=&#34;安全信任链&#34;&gt;安全信任链
-&lt;/h3&gt;&lt;p&gt;移动设备通常被视为“更安全”，主要原因是被强制执行的安全启动，让设备只能加载被信任的程序。程序这个定义其实相当宽泛，从 Android APP，到 Android 系统，到用来启动 Android 系统的二进制文件都可以被算成“程序”。作为邪恶的 Google 和版权律师，你希望以安全的名义保证运行的系统是经过验证的，不该有&lt;code&gt;su&lt;/code&gt;之类不该出现的东西，应用程序就该跑在完全的沙盒里等等。所以你需要和硬件厂商联合，阻止玩家们对系统进行不必要的修改，但是你又需要放过自己，让自己可以对系统进行更新.&lt;/p&gt;
-&lt;h4 id=&#34;soc-和-secure-boot&#34;&gt;SoC 和 Secure Boot
-&lt;/h4&gt;&lt;p&gt;我们要介绍的第一个概念是Fuse，这个大家称之为熔丝，是早期硬件设备的只读存储设备PROM的存储数据的方法，就是字面意思的导电丝，写入数据的方式是直接用高电流烧断保险丝，这个名字一直流传到了现在，于是我们叫往芯片写入程序的过程为烧录或者Burn。这个过程很显然是不可逆的，即被烧断的保险丝不能复原。&lt;/p&gt;
-&lt;p&gt;在现代的SoC里，CPU内部也被设置了Fuse，当然烧断熔丝的过程实在太没道理，于是我们用硬件设计来保证Fuse永不复位，这个就被称作eFuse。SoC本身的eFuse里存放了公钥和是否启动Secureboot的标志位，在上电开机的时候，在SoC里出厂即固化在SoC里的一段只读区域的的Primary Bootloader(PBL) 会以这个公钥验证下一步要加载的XBL(eXtensible Bootloader)的合法性，同时Qualcomm EDL(有的时候也被称作9008)也发生在这个阶段。PBL会去检查主板短接，USB短接或者音量键等等，来检查是否要进行EDL。&lt;/p&gt;
-&lt;h4 id=&#34;从-pbl-到-abl&#34;&gt;从 PBL 到 ABL
-&lt;/h4&gt;&lt;p&gt;XBL存储在设备的存储空间中，它负责以一种比写死在SoC里的PBL更灵活的方式管理开机过程。它也存储下一步ABL(Android Bootloader)的公钥，当验证ABL无误之后，它就会开始正式启动Android。有的时候ABL也被称作&lt;code&gt;fastboot&lt;/code&gt;，主要是ABL里装载了接受&lt;code&gt;fastboot&lt;/code&gt;命令的模式，当你在系统里执行&lt;code&gt;adb reboot bootloader&lt;/code&gt;之后就会进入ABL主导的&lt;code&gt;fastboot&lt;/code&gt;模式。&lt;/p&gt;
-&lt;h4 id=&#34;所以到底什么是bl锁&#34;&gt;所以到底什么是BL锁？
-&lt;/h4&gt;&lt;p&gt;实际上的BL锁在ABL里，或者说，由ABL管理。BL锁是否启用的标志位在处理器中可擦写的存储空间（类似EEPROM）中。ABL会验证vbmeta分区的签名，只有当这个签名与ABL里的厂商公钥符合才允许启动。当BL锁被解锁的时候，vbmeta的签名仍然存在，但是ABL不会管这个签名是否是设备厂商的了。&lt;/p&gt;
-&lt;h4 id=&#34;解锁bl锁的原理是什么&#34;&gt;解锁BL锁的原理是什么？
-&lt;/h4&gt;&lt;p&gt;小米之类厂商的ABL允许在&lt;code&gt;fastboot&lt;/code&gt;模式中执行&lt;code&gt;oem unlock&lt;/code&gt;命令，当然为了限制用户这个命令大多会被魔改，比如需要服务器下发的允许解锁命令等等，但是终归还是可以解锁的。在一切验证之后，ABL会把验BL位翻转，代表已经解锁完成了。之后vbmeta分区的合法性就不会被ABL验证了。&lt;/p&gt;
-&lt;p&gt;这个BL锁的标志位不管对于任何设备都是存在的，但是很多设备的ABL根本不会允许解锁——意味着当ABL发现BL解锁的标志位已经打开之后就直接拒绝启动。很显然这种设备的ABL里也根本不会实现这种命令。但是厂商总要开发并测试设备的系统更新，于是厂商会准备开发机并单独准备一个这个开发机的ABL（类似笔者使用的Nubia Z60u aka NX721J），这个ABL允许解锁bootloader。在一切绝佳的情况下如果这个开发机不泄露就无人能解锁这个手机…但是很显然某些人缺钱或者单纯的草台班子。&lt;/p&gt;
-&lt;p&gt;在这种设备的开发机流出以后，它会被迅速dump整个闪存并提取出&lt;code&gt;abl.img&lt;/code&gt;镜像，由于这个ABL镜像有来自厂商的签名所以它能通过XBL的校验，但同时它又实现了BL解锁的功能。于是我们就破解了曾经被ZTE官方闪烁其词不让破解的Nubia Z60u，有传言称z60u的一个变体产品被中国政界采用并签下了严令不可解锁的合同，但是好端端根正苗红的国企总有人草台班子了，笔者猜测中兴要亏麻了。&lt;/p&gt;
-&lt;h4 id=&#34;把soc卸下来&#34;&gt;把SoC卸下来
-&lt;/h4&gt;&lt;p&gt;在某些最极端的情况下完全没有办法解锁BL，但是在那些不计一切代价的情况下可以拆开手机安装一个新的SoC，然后提取同SoC其他手机的XBL和ABL替换，但是注意XBL在第一次启动如果检测到secureboot没有开启则会自动写入并且启用Secureboot，如果你没有把闪存一起热风枪吹下来来写入XBL和ABL的话——恭喜你你又报销了一块SoC。这当然是一种合理但是代价可怕的解锁手机BL的办法，但在像是小米高考的情况下相比高昂的内部解锁费用买一块SoC反而没那么贵了。&lt;/p&gt;
-&lt;h2 id=&#34;dm-verity-从小白到bootloop&#34;&gt;dm-verity 从小白到Bootloop
-&lt;/h2&gt;&lt;p&gt;我特别要写下这一章，主要原因是因为现在刷ROM的难度已经降低了很多，一些东西被封装的非常好，导致很多萌新在迈向Maintainer之路的时候撞了个头破血流（指我自己）。&lt;/p&gt;
-&lt;p&gt;以上验证流程只从开始到ABL本身，执行到ABL之后之后的安全启动信任链就要交由dm-verity。这部分是由ABL验证的init_boot分区执行下一步，它会验证boot分区，recovery分区，还有system分区。验证需要的公钥等存放在vbmeta分区中。vbmeta分区本身也是由ABL验证的。&lt;/p&gt;
-&lt;p&gt;解锁Bootloader会解除ABL对vbmeta,init_boot的强制符合制造商证书的要求，也就是你可以修补init_boot来刷入magisk或者KernelSU了。但是如果你想进一步修改其他分区，例如recovery，boot，vendor又没有禁用dm-verity，则会触发bootloop。&lt;/p&gt;
-&lt;p&gt;KernelSU和magisk都提供了一种类似overlayfs的方式（即不直接修改这些受保护分区，而是使用一种特殊的文件系统来间接完成这一点）来修改，于是就诞生了Magisk和KernelSU的模块系统。这些模块告诉KernelSU和Magisk该在启动时如何注入修改，由于我们并没有实际上碰分区本身则不会触发Bootloop。&lt;/p&gt;
-&lt;p&gt;在一些极端的情况下，例如使用第三方twrp或者刷入整个第三方rom，像是小米MIX4的TWRP recovery会先让你使用fastboot boot twrp.img来临时启动这个img,然后在recovery内安装，这个过程会修改vbmeta的数据，使其符合recovery分区的摘要。而刷入第三方ROM的时候ROM附带整个vbmeta.img，它已经由ROM维护者的证书签名并把数据恰当的放进了vbmeta分区内，所以也不会bootloop。&lt;/p&gt;
-&lt;p&gt;笔者写下这一章的主要原因是记录一段时间以前试着自编译Z60U的TWRP的时候recovery的问题，这个手机的fastboot并不支持boot命令，于是毫不意外的需要直接刷写。于是毫不意外的变砖了。于是我学到了教训，需要手动修改vbmeta分区禁用dm-verity。实际上adb甚至有一条命令来完成这一点：&lt;code&gt;fastboot flash --disable-verity --disable-verification vbmeta vbmeta.img&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tee和play-integrity&#34;&gt;TEE和Play-integrity
-&lt;/h2&gt;&lt;p&gt;这一部分其实是临时追加的，主要原因是谷歌这段时间来的一大堆政策变动和各大内容提供商（Netflix）的一些更改，导致这一部分就临时起意追加进来了。&lt;/p&gt;
-&lt;h3 id=&#34;安全&#34;&gt;安全？
-&lt;/h3&gt;&lt;p&gt;TEE是Trusted Execution Environment的简写，它是处理器中单独的一块区域或者就是单独的一块芯片，具有存储能力和无视权限的直接阅读设备闪存的能力，由于它访问设备闪存和eFuse使用单独的通道，用户、Android系统、Linux内核都无法干预或者篡改它的阅读过程。&lt;/p&gt;
-&lt;p&gt;TEE内存储着一个密钥，这个密钥永远不离开TEE且没法通过常规方法取出（直接上显微镜之类不计一切成本的方法除外）。这个密钥没有官方名字，不过大家都叫它Keybox。这个Keybox守护着例如用来解密data分区的密钥，你的指纹数据等等，在理论上Android在启用了它之后就变得非常安全了。在解锁bootloader之后TEE当然会继续工作，当然它也会读到解锁状态。&lt;/p&gt;
-&lt;h3 id=&#34;从magisk-hide开始的猫抓老鼠&#34;&gt;从Magisk-Hide开始的猫抓老鼠
-&lt;/h3&gt;&lt;p&gt;各类银行APP在知道了手机具有Root权限之后会直接停止运行，并且抛出设备不安全等提示，于是各种Root方案就开始试图阻止这些APP获知设备已经被root的事实。&lt;/p&gt;
-&lt;p&gt;一开始的思路是直接在对应应用试图探测&lt;code&gt;su&lt;/code&gt;之后回答&lt;code&gt;su&lt;/code&gt;不存在，后来演变成对应各种其他迹象的伪造，等等。各种APP也会试图通过探测应用列表来寻找对应的软件，比如Kernelsu Client, Magisk Manager, LSPosed Manager等等，当然既然有了root权限，可以直接注入探测软件的行为来阻止这一点。之后的行为变成了Google对Magisk作者以高薪水进行的招安，于是Magisk-Hide就EOL了。&lt;/p&gt;
-&lt;p&gt;但是战斗并没有停止，这些银行没有一个实在紧迫的原因阻止用户root(毕竟如果设备被入侵了损失的还是用户自己)。但是最大的威胁来自于各种流媒体提供商：如果在手机上播放的内容被dump下来，盗版的损失可就不计其数了。但是这个事情实在反直觉：毕竟既然要在用户的设备屏幕上放，那怎么阻止未经授权的转录呢？我们该如何寻找一种行之有效的方法，绝对断定用户的设备有没有遭篡改呢？既然用户的设备已经root，用户可以基于用户知道的东西伪造任何一条请求。所以我们需要让用户的设备提供一种用户自己不知道，但是用户的设备知道的信息。&lt;/p&gt;
-&lt;p&gt;于是Play-integrity诞生了，在TEE之内存在的私钥和证书由厂商经过Google授权签发。Play-integrity是Google服务器对设备TEE的一种挑战：要求它查询设备有没有被篡改，并且用由Google签发的证书和私钥来证明自己的真实性。真实性的验证不发生在设备上，而是服务器上。这样，KernelSU用尽浑身解数都无法获取这个硬件上隔离的证书和私钥，由于TEE的硬件级权限又无法阻止TEE获取信息。理论上就无敌了。&lt;/p&gt;
-&lt;p&gt;可是&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637.png&#34;
-	width=&#34;1362&#34;
-	height=&#34;112&#34;
-	srcset=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu10265052675397196317.png 480w, https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu3580325027836855039.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20250628123256637&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1216&#34;
-		data-flex-basis=&#34;2918px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;这套系统里最不安全的还是人。&lt;/p&gt;
-&lt;p&gt;很难说这是宿命还是偶然，这些Keybox会以各种各样奇奇怪怪的方式流出，这套证书和私钥是TEE保证自己的信息不被篡改的唯一优势，这些证书和私钥可能来自于设备厂商的无意有意泄露，也可能来自于有严重硬件漏洞的设备，总之当这些东西泄露后，TEE可以被轻易伪造，这就是PlayintegrityFix这类模块干的事情。当然谷歌也能预料掉这一点，于是它不断更新被吊销的密钥列表。但是可以想见，新的密钥仍然源源不断流出。&lt;/p&gt;
-&lt;p&gt;Play integrity 分三种，不过现在Google的政策来说三种Integrity是一样的，分别是Basic integrity,Device integrity, Strong Integrity。如果你在安装了Kernelsu的设备上安装了play integrityfix和Tricky Store,那你就能在root的设备通过Netflix，香港八达通，Authy之类的认证。&lt;/p&gt;
-&lt;p&gt;咸鱼上有卖Keybox的。&lt;/p&gt;
-&lt;p&gt;完&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>你好世界</title>
-        <link>https://blog.minutesphinx.link/p/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</link>
-        <pubDate>Tue, 24 Jun 2025 11:12:40 +0800</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/p/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</guid>
-        <description>&lt;h1 id=&#34;关于博客&#34;&gt;关于博客
-&lt;/h1&gt;&lt;p&gt;在摇摇晃晃的写了很多很多文档之后，终于决定以后把自己写的文章都丢进博客里。&lt;/p&gt;
-&lt;p&gt;其实之前也不是没有过博客，但是主要问题是始终做不到持之以恒，最后文章丢的丢博客还没人看，服务器从WordPress到Ghost搭建假设玩到飞起最后博客没写多少，然后被家长push花了不少电费于是陷入持之以恒的焦虑中，就这样就荒废了。&lt;/p&gt;
-&lt;p&gt;但是Yuki出现了。某种意义上ta重新点燃了我写下点什么东西的热情，于是这篇文章和背后的博客就诞生了。急急忙忙买了域名就开始把自己之前写下的东西搬上来，最后发现自己写过的东西Yuki都写过一遍了，于是这里我会写点其他什么东西（嗯）。&lt;/p&gt;
-&lt;p&gt;总之对Yuki的感谢难以言表（嗯）。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://blog.minutesphinx.link/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://blog.minutesphinx.link/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/links/</guid>
-        <description>&lt;h1 id=&#34;外链&#34;&gt;外链
-&lt;/h1&gt;&lt;p&gt;欢迎哦哇哦哦哦哦，总之这里是一些链接什么的，我也不清楚要干什么。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://blog.minutesphinx.link/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://blog.minutesphinx.link/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.minutesphinx.link/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;这里是MinuteSphinx（She/Her），大部分时候简写为ms（小写的哟），也有其他名字（只有亲密的人才会知道哦）。&lt;/p&gt;
-&lt;p&gt;算是半个开发者，🇳🇱小留，EE专业学生，在学习很多东西，其中有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;计算机图形学&lt;/li&gt;
-&lt;li&gt;软件逆向工程&lt;/li&gt;
-&lt;li&gt;Rust：一种很有意思的编程语言&lt;/li&gt;
-&lt;li&gt;Verilog和硬件：恐怕只能之后再学了&lt;/li&gt;
-&lt;li&gt;Flutter很有意思的GUI框架和编程模式&lt;/li&gt;
-&lt;li&gt;同时也在研究一些泛泛而谈的东西&lt;/li&gt;
-&lt;li&gt;函数范式编程（我想找个人教我Lisp啊啊啊啊啊&lt;/li&gt;
-&lt;li&gt;物理和数学&lt;/li&gt;
-&lt;li&gt;Android系统维护&lt;/li&gt;
-&lt;li&gt;控制理论，信号处理等等&lt;/li&gt;
-&lt;li&gt;机械设计&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ms很喜欢很喜欢打游戏，因此ADHD的ms有的时候会忘记正事。&lt;/p&gt;
-&lt;p&gt;这个站点是基本上纯静态的，实际上ms并不知道背后到底是啥架构，讨厌JavaScript和HTML的ms也不想知道。&lt;/p&gt;
-&lt;p&gt;不过这个站点之后的文章可能会附带一些webapp啥的，那些会使用egui搭建并且Host在ms的homelab上。&lt;/p&gt;
-&lt;p&gt;ms对于一些东西有天生的抵触，虽然我不会ban人但是我会很伤心😢所以放ms一马&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Java和Java相关的东西（Kotlin除外）&lt;/li&gt;
-&lt;li&gt;C和C++&lt;/li&gt;
-&lt;li&gt;糟糕的代码&lt;/li&gt;
-&lt;li&gt;完全没有设计让初学者看懂的文档&lt;/li&gt;
-&lt;li&gt;傲慢的开发者&lt;/li&gt;
-&lt;li&gt;炫富，炫耀自己的Privilege&lt;/li&gt;
-&lt;li&gt;堆了不知道多少层的继承（因此不太喜欢OOP）&lt;/li&gt;
-&lt;li&gt;Apple相关设备（买不起啊啊啊）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;目前ms在干什么呢？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;想搞点钱钱来缓解焦虑&lt;/li&gt;
-&lt;li&gt;一个Vive Tracker的廉价复刻，或许做完之后能赚到大笔钱钱，就能解决朋友和自己的学费了呜呜。&lt;/li&gt;
-&lt;li&gt;Picokey的扩展版，加入指纹功能&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         

@@ -13,7 +13,7 @@
         <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
         
         <guid>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;blockquote&gt;
+        <description>&lt;img src="https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/cover.jpg" alt="Featured image of post 杜比视界杂谈" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;作者是一名目前正在gap的学生，金钱不多所以说是穷鬼们的。这套教程完全出于我在近三个月里摸爬滚打的半实战经验。可能有错漏之处敬请谅解。要是你反对我会哭然后在家门口抹眼泪上吊并且不会让你知道😢&lt;/p&gt;
 &lt;p&gt;此外我本人对于颜色，亮度，声音的敏感度不高，杜比的元数据是基本上没有对比看不出来的，所以说我是木耳朵木眼睛HiFi啥的求求你饶了我吧我真听不出来。&lt;/p&gt;
@@ -180,7 +180,7 @@
         <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
         
         <guid>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;blockquote&gt;
+        <description>&lt;img src="https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/cover.webp" alt="Featured image of post Android刷机杂谈" /&gt;&lt;blockquote&gt;
 &lt;p&gt;这篇文章假定你已经会了以下的东西：基本的使用&lt;code&gt;adb sideload&lt;/code&gt;或者&lt;code&gt; fastboot update&lt;/code&gt;来刷机，知道什么是Custom Recovery以及对于第三方系统的基本了解。十分建议阅读一下Yuki写的&lt;a class=&#34;link&#34; href=&#34;https://obsp.de/p/moto-g53-penang-flashing-evolutionx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;刷机教程&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
