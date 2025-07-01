@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>理论与实践 on MS工坊</title>
+        <link>https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+        <description>Recent content in 理论与实践 on MS工坊</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>by MinuteSphinx CC0</copyright>
+        <lastBuildDate>Mon, 30 Jun 2025 07:49:15 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>函数范式编程</title>
+        <link>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Mon, 30 Jun 2025 07:49:15 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+        <description>&lt;img src="https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp" alt="Featured image of post 函数范式编程" /&gt;&lt;blockquote&gt;
+&lt;p&gt;我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;从计算机发展史看编程范式&#34;&gt;从计算机发展史看编程范式
+&lt;/h2&gt;&lt;p&gt;计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于&lt;strong&gt;工程实践&lt;/strong&gt;的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。&lt;/p&gt;
+&lt;p&gt;随着计算机从一群科学家的狂欢变成更实用，更加商业化的东西，我们发明了编译器，我们可以通过一些更说人话的方法编写程序。所以我们有了Fortran和COBOL(出于美国政府的厕所管理员和火星人的邪恶交易的原因，这个语言还在银行系统里使用，实在是太邪恶了)，此时的编程语言基本上就是对于硬件的抽象描述（不再是字面描述了）和一大堆语法糖的混合。我们也第一次获得了一种不再是处理器特定的，&lt;em&gt;把人类思路转换为编程思路的方法&lt;/em&gt;，这个描述可能有点晦涩，不过请尽量理解其意思。&lt;/p&gt;
+&lt;p&gt;随着计算机应用逐渐广泛，我们第一次出现了&lt;strong&gt;修订&lt;/strong&gt;这种方法的需求，于是我们发明了编程范式这个词，我们把流行的几种思路简单归类，就出现了面向对象编程，面向过程编程，函数式编程和其他几种范式。这几种范式各有优劣，在从第一台计算机发明到21世纪20年代，这些范式兴衰交替。&lt;/p&gt;
+&lt;p&gt;强行谈这些范式出现的时间完全没有特别的意义，不过从上世纪80年代起，面向对象编程因为其很容易理解且符合人脑思路的特性随着工业和商业软件的爆发迅速崛起到今天，它的本质是“东西”（也就是对象），即：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个世界上所有东西都是东西（废话）东西可以被归类 （万物皆对象）&lt;/li&gt;
+&lt;li&gt;东西有特征 （对象有属性）&lt;/li&gt;
+&lt;li&gt;你可以对东西做些什么 （对象有方法）&lt;/li&gt;
+&lt;li&gt;某些类的东西共享相同的特征 （继承）&lt;/li&gt;
+&lt;li&gt;某些类的东西可以做的东西有相同之处 （多态）&lt;/li&gt;
+&lt;li&gt;数据以东西的特征表示 （状态存储在对象中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这套逻辑很符合人脑的直觉，所以它经久不衰，但是它有一些更奇怪的问题：&lt;/p&gt;
+&lt;h2 id=&#34;纯粹的编程&#34;&gt;纯粹的编程
+&lt;/h2&gt;&lt;p&gt;面向对象里我们发明了很多概念，我们通过这些概念把程序束缚在接口里，把状态安全的束缚在属性里，我们通过继承来重用代码，后来我们发现多重继承搞出的麻烦远比继承本身带来的好处多，于是我们发明了组合优于继承，我们用Tag和捆绑在Tag上的特性小心的修饰基类来避免更多麻烦…但是我们大部分时候好像并不需要那么多东西，我们不需要为了发明一个洗衣机先发明一个电器，而这个电器为了可扩展性需要兼容食品处理操作，虽然我们永远用不到洗衣机做饭。&lt;/p&gt;
+&lt;p&gt;我们需要意识到我们大部分时候，或者广义上的所有时候只是把数据从一个地方拿出来煮熟剁碎烤干再放到另外一个地方去，我们并不需要设计一大堆复杂的鬼哭狼嚎的，于是函数式编程在这些日子重新兴起，因为它做了减法：&lt;/p&gt;
+&lt;p&gt;第一个被砍掉的东西是状态本身，编程编程，数据是人类灌进去的，而我们只需要描述如何处理这些数据就行了。而状态本身是运行时该管理的事情。&lt;/p&gt;
+&lt;p&gt;既然状态根本不存在，那同样的数据一定会带来同样的结果！那这就是数学中的函数，函数编程称其为纯函数。&lt;/p&gt;
+&lt;p&gt;数学中的函数不应该干计算以外的所有东西，所以它不能修改外部变量，读写文件，处理网络，因为它只是数学意义上的函数！这些复杂的副作用是运行时该处理的事情。&lt;/p&gt;
+&lt;p&gt;函数的结果自然可以塞进另外一个函数里，数据流水线可以简单的拼装起来。&lt;/p&gt;
+&lt;p&gt;比起传递一大堆奇怪的属性集，那我们为什么不能直接传递函数？于是我们得到了高阶函数。高阶函数&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
