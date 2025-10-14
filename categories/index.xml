@@ -6,7 +6,32 @@
         <description>Recent content in Categories on MS工坊</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>by MinuteSphinx CC0</copyright><atom:link href="https://blog.minutesphinx.link/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>by MinuteSphinx CC0</copyright>
+        <lastBuildDate>Wed, 06 Aug 2025 12:43:13 +0200</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>理论与实践</title>
+        <link>https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+        <pubDate>Wed, 06 Aug 2025 12:43:13 +0200</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>各类设备折腾</title>
+        <link>https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/</link>
+        <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Android相关</title>
+        <link>https://blog.minutesphinx.link/categories/android%E7%9B%B8%E5%85%B3/</link>
+        <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/categories/android%E7%9B%B8%E5%85%B3/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://blog.minutesphinx.link/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

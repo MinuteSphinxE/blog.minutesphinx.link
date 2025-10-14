@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n">
 <title>函数范式编程</title>
 
-<link rel='canonical' href='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
+<link rel='canonical' href='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
 
 <link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="函数范式编程">
 <meta property='og:description' content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n">
-<meta property='og:url' content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
+<meta property='og:url' content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
 <meta property='og:site_name' content='MS工坊'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='WIP' /><meta property='article:tag' content='大部头' /><meta property='article:published_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='article:modified_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='WIP' /><meta property='article:tag' content='大部头' /><meta property='article:published_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='article:modified_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='og:image' content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
 <meta name="twitter:title" content="函数范式编程">
 <meta name="twitter:description" content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
+    <meta name="twitter:image" content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -327,9 +327,9 @@ unicode: "ebbe"
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="http://localhost:1313/en/" >English</option>
+                                    <option value="https://blog.minutesphinx.link/en/" >English</option>
                                 
-                                    <option value="http://localhost:1313/" selected>中文</option>
+                                    <option value="https://blog.minutesphinx.link/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -780,7 +780,7 @@ unicode: "ea7b"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.adcc9c491529af1b4acc32b9843e9aa4a1e70161014f9055f686bd842274cf68.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

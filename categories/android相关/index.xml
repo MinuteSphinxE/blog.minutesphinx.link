@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Android相关 on MS工坊</title>
-        <link>http://localhost:1313/categories/android%E7%9B%B8%E5%85%B3/</link>
+        <link>https://blog.minutesphinx.link/categories/android%E7%9B%B8%E5%85%B3/</link>
         <description>Recent content in Android相关 on MS工坊</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>by MinuteSphinx CC0</copyright>
-        <lastBuildDate>Wed, 25 Jun 2025 02:56:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/android%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Jun 2025 02:56:58 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/android%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Android刷机杂谈</title>
-        <link>http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</link>
+        <link>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</link>
         <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;img src="http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/cover.webp" alt="Featured image of post Android刷机杂谈" /&gt;&lt;blockquote&gt;
+        <guid>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;img src="https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/cover.webp" alt="Featured image of post Android刷机杂谈" /&gt;&lt;blockquote&gt;
 &lt;p&gt;这篇文章假定你已经会了以下的东西：基本的使用&lt;code&gt;adb sideload&lt;/code&gt;或者&lt;code&gt; fastboot update&lt;/code&gt;来刷机，知道什么是Custom Recovery以及对于第三方系统的基本了解。十分建议阅读一下Yuki写的&lt;a class=&#34;link&#34; href=&#34;https://obsp.de/p/moto-g53-penang-flashing-evolutionx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;刷机教程&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;android系统如何启动&#34;&gt;Android系统如何启动
@@ -51,10 +51,10 @@
 &lt;p&gt;但是战斗并没有停止，这些银行没有一个实在紧迫的原因阻止用户root(毕竟如果设备被入侵了损失的还是用户自己)。但是最大的威胁来自于各种流媒体提供商：如果在手机上播放的内容被dump下来，盗版的损失可就不计其数了。但是这个事情实在反直觉：毕竟既然要在用户的设备屏幕上放，那怎么阻止未经授权的转录呢？我们该如何寻找一种行之有效的方法，绝对断定用户的设备有没有遭篡改呢？既然用户的设备已经root，用户可以基于用户知道的东西伪造任何一条请求。所以我们需要让用户的设备提供一种用户自己不知道，但是用户的设备知道的信息。&lt;/p&gt;
 &lt;p&gt;于是Play-integrity诞生了，在TEE之内存在的私钥和证书由厂商经过Google授权签发。Play-integrity是Google服务器对设备TEE的一种挑战：要求它查询设备有没有被篡改，并且用由Google签发的证书和私钥来证明自己的真实性。真实性的验证不发生在设备上，而是服务器上。这样，KernelSU用尽浑身解数都无法获取这个硬件上隔离的证书和私钥，由于TEE的硬件级权限又无法阻止TEE获取信息。理论上就无敌了。&lt;/p&gt;
 &lt;p&gt;可是&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637.png&#34;
 	width=&#34;1362&#34;
 	height=&#34;112&#34;
-	srcset=&#34;http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_99f9b4c2295e85e5.png 480w, http://localhost:1313/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_4375901c12f75cc2.png 1024w&#34;
+	srcset=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_99f9b4c2295e85e5.png 480w, https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_4375901c12f75cc2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20250628123256637&#34;

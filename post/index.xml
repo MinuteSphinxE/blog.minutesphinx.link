@@ -154,6 +154,323 @@
 &lt;p&gt;&lt;strong&gt;（手写补充）：&lt;/strong&gt; 我们没能给她一个普通的童年，但至少，要让她的新“家人”，是个幸福的家庭。&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>从LaTeX到声明式</title>
+        <link>https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</link>
+        <pubDate>Wed, 06 Aug 2025 12:43:13 +0200</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</guid>
+        <description>&lt;h2 id=&#34;所见即所得&#34;&gt;所见即所得
+&lt;/h2&gt;&lt;p&gt;我们已经习惯了使用MS Word类似的操作逻辑来编写具有复杂排版的文档。假设我们要编写一张贺卡，祝你的朋友生日快乐，从一篇空文档开始，我们干的事情大概如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;写下生日快乐四个字&lt;/li&gt;
+&lt;li&gt;想一想，发现宋体小字号不太好看，于是选中切换成华文彩圆把字号拉到72px。&lt;/li&gt;
+&lt;li&gt;发现要画一些背景上去，从网上下载一张图片换成背景&lt;/li&gt;
+&lt;li&gt;意识到自己要写下来一些文字，于是敲进去一些祝福语。&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&amp;hellip;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这种操作逻辑我们已经习以为常，从我们日常使用的MS Word，到Adobe InDesign之类的专业排版工具我们一直都在使用。这种操作逻辑有一个显而易见的优势：易于理解，我们把做的事情一步步写下来，然后按照顺序向软件发送命令，顺序很重要不能颠倒&amp;hellip;.等等。实际上这种操作逻辑有一个名字：命令式。我们把做一件事情的方法按照步骤写下来，按照顺序执行。这种编码方式深入人心，我们用它制作了相当多的卓越并且令人惊叹的排版作品：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency.png&#34;
+	width=&#34;794&#34;
+	height=&#34;613&#34;
+	srcset=&#34;https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu_78f83dd4231768f9.png 480w, https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu_77e12fd13c02c034.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;这真的很好看&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;310px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;但是这种方法其实存在一些问题：而这个在InDesign中最为显著，而受限于它本身的设计模式，Adobe, Microsoft都无法解决这个问题，反而让这个问题变得愈发的严重了。&lt;/p&gt;
+&lt;p&gt;假设我们要排版一张页面，要像上图一样有精美的排版，我们需要完成一系列复杂的操作。这些复杂的操作可以被分解为更小的原子操作。问题在于：这些操作过多过繁杂还具有具有相对的顺序让事情变得更加糟糕了。每一个亮眼的特性可以被分解为几个毫不相干的操作之间的巧妙叠加——但是它巧妙过头了。记住&lt;strong&gt;这些操作能带来这样的结果&lt;/strong&gt;本身就要消耗不少心力，再者你在做的事情是创意性工作，你还需要根据一个自己想出来的亮眼效果，反推如何从一大堆原子操作的工具箱里组合出来他们。你还需要思考这些原子操作在这个巨大InDesign工具箱的哪个下拉菜单里。这些能力被称为一个排版设计师的“经验”，这些经验从无数的实践中获得，当然要花费很多时间。更显然的结论是InDesign一个简单的年更新就有可能将经验化为乌有——那它还真的能被称作经验吗？&lt;/p&gt;
+&lt;p&gt;排版为内容服务，尤其是上图这种TTRPG规则的排版。如果你已经花了太多时间在“如何创造一个酷排版”上，你大概就没有那么多心力专注于内容本身了。所以你需要一种解决方案，它能根据你写下的文字内容自动生成酷的排版，当然怎么生成当然需要管，但是不要和内容耦合的那么深，以至于改一点内容排版就要大改的程度。&lt;/p&gt;
+&lt;h2 id=&#34;做什么而非怎么做&#34;&gt;做什么而非怎么做
+&lt;/h2&gt;&lt;p&gt;MS Office曾经试图解决这个问题：于是我们引入了从小学生演讲者到现代打工人都熟知于心的&amp;quot;模板&amp;quot;。从基本实现原理来看，PowerPoint模板本质上是一个带了一些元数据的一张已经被设计好的一些幻灯片。这些元数据指定了每张幻灯片是干什么用的，每张幻灯片上有几个内容可以去的文本框，当你想要一张酷酷的幻灯片的时候，只需要导入模板，创建你想要的一页幻灯片，然后把内容复制粘贴进去就行了。&lt;/p&gt;
+&lt;p&gt;这已经足够高效了，但是不妨我们再幻想一下接下来我们应该怎么进一步发扬这种思想。我们应该有一种方法，根据纯文字生成幻灯片。我们只需要在文字里插入“这是标题”，“这是数据”，这里切换下一页之类的标签，但是我们不会细致到这里多少个像素，这里用什么字体，然后我们通过一种神奇的机器把这串实际上没有耗费多少精力的纯文本直接转化为漂亮的幻灯片！完全不用思考内容该怎么排布，因为这个神奇的机器会自己替你干！&lt;/p&gt;
+&lt;p&gt;于是我们触及了 &lt;strong&gt;声明式范式&lt;/strong&gt; 的核心精髓。而早在个人电脑普及之初，甚至在图形界面成为主流之前，一种强大的&lt;strong&gt;声明式排版系统&lt;/strong&gt;就已经存在并深刻影响了计算机科学——它就是 &lt;strong&gt;LaTeX&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当然我们在没有“怎么做”的情况下无法完成任务，但是如果我们把&lt;strong&gt;内容（声明）&lt;/strong&gt; 和 &lt;strong&gt;排版（基于规则的转换）&lt;/strong&gt; 完全切分开，这本身就能给设计排版的过程减少大量负担。&lt;strong&gt;这种彻底的分离——不可变的内容声明与基于规则的样式转换——其思想内核与函数式编程追求纯函数（输出只取决于输入，无副作用）、不可变数据和高阶抽象的理念高度重合。&lt;/strong&gt; 我们将在探讨LaTeX之后，特别谈谈这些关系。&lt;/p&gt;
+&lt;h2 id=&#34;具体如何&#34;&gt;具体如何？
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>函数范式编程</title>
+        <link>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Mon, 30 Jun 2025 07:49:15 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+        <description>&lt;img src="https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp" alt="Featured image of post 函数范式编程" /&gt;&lt;blockquote&gt;
+&lt;p&gt;我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;从计算机发展史看编程范式&#34;&gt;从计算机发展史看编程范式
+&lt;/h2&gt;&lt;p&gt;计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于&lt;strong&gt;工程实践&lt;/strong&gt;的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。&lt;/p&gt;
+&lt;p&gt;随着计算机从一群科学家的狂欢变成更实用，更加商业化的东西，我们发明了编译器，我们可以通过一些更说人话的方法编写程序。所以我们有了Fortran和COBOL(出于美国政府的厕所管理员和火星人的邪恶交易的原因，这个语言还在银行系统里使用，实在是太邪恶了)，此时的编程语言基本上就是对于硬件的抽象描述（不再是字面描述了）和一大堆语法糖的混合。我们也第一次获得了一种不再是处理器特定的，&lt;em&gt;把人类思路转换为编程思路的方法&lt;/em&gt;，这个描述可能有点晦涩，不过请尽量理解其意思。&lt;/p&gt;
+&lt;p&gt;随着计算机应用逐渐广泛，我们第一次出现了&lt;strong&gt;修订&lt;/strong&gt;这种方法的需求，于是我们发明了编程范式这个词，我们把流行的几种思路简单归类，就出现了面向对象编程，面向过程编程，函数式编程和其他几种范式。这几种范式各有优劣，在从第一台计算机发明到21世纪20年代，这些范式兴衰交替。&lt;/p&gt;
+&lt;p&gt;强行谈这些范式出现的时间完全没有特别的意义，不过从上世纪80年代起，面向对象编程因为其很容易理解且符合人脑思路的特性随着工业和商业软件的爆发迅速崛起到今天，它的本质是“东西”（也就是对象），即：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个世界上所有东西都是东西（废话）东西可以被归类 （万物皆对象）&lt;/li&gt;
+&lt;li&gt;东西有特征 （对象有属性）&lt;/li&gt;
+&lt;li&gt;你可以对东西做些什么 （对象有方法）&lt;/li&gt;
+&lt;li&gt;某些类的东西共享相同的特征 （继承）&lt;/li&gt;
+&lt;li&gt;某些类的东西可以做的东西有相同之处 （多态）&lt;/li&gt;
+&lt;li&gt;数据以东西的特征表示 （状态存储在对象中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这套逻辑很符合人脑的直觉，所以它经久不衰，但是它有一些更奇怪的问题：&lt;/p&gt;
+&lt;h2 id=&#34;纯粹的编程&#34;&gt;纯粹的编程
+&lt;/h2&gt;&lt;p&gt;面向对象里我们发明了很多概念，我们通过这些概念把程序束缚在接口里，把状态安全的束缚在属性里，我们通过继承来重用代码，后来我们发现多重继承搞出的麻烦远比继承本身带来的好处多，于是我们发明了组合优于继承，我们用Tag和捆绑在Tag上的特性小心的修饰基类来避免更多麻烦…但是我们大部分时候好像并不需要那么多东西，我们不需要为了发明一个洗衣机先发明一个电器，而这个电器为了可扩展性需要兼容食品处理操作，虽然我们永远用不到洗衣机做饭。&lt;/p&gt;
+&lt;p&gt;我们需要意识到我们大部分时候，或者广义上的所有时候只是把数据从一个地方拿出来煮熟剁碎烤干再放到另外一个地方去，我们并不需要设计一大堆复杂的鬼哭狼嚎的，于是函数式编程在这些日子重新兴起，因为它做了减法：&lt;/p&gt;
+&lt;p&gt;第一个被砍掉的东西是状态本身，编程编程，数据是人类灌进去的，而我们只需要描述如何处理这些数据就行了。而状态本身是运行时该管理的事情。&lt;/p&gt;
+&lt;p&gt;既然状态根本不存在，那同样的数据一定会带来同样的结果！那这就是数学中的函数，函数编程称其为纯函数。&lt;/p&gt;
+&lt;p&gt;数学中的函数不应该干计算以外的所有东西，所以它不能修改外部变量，读写文件，处理网络，因为它只是数学意义上的函数！这些复杂的副作用是运行时该处理的事情。&lt;/p&gt;
+&lt;p&gt;函数的结果自然可以塞进另外一个函数里，数据流水线可以简单的拼装起来。&lt;/p&gt;
+&lt;p&gt;比起传递一大堆奇怪的属性集，那我们为什么不能直接传递函数？于是我们得到了高阶函数。高阶函数&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>杜比视界杂谈</title>
+        <link>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;img src="https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/cover.jpg" alt="Featured image of post 杜比视界杂谈" /&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;作者是一名目前正在gap的学生，金钱不多所以说是穷鬼们的。这套教程完全出于我在近三个月里摸爬滚打的半实战经验。可能有错漏之处敬请谅解。要是你反对我会哭然后在家门口抹眼泪上吊并且不会让你知道😢&lt;/p&gt;
+&lt;p&gt;此外我本人对于颜色，亮度，声音的敏感度不高，杜比的元数据是基本上没有对比看不出来的，所以说我是木耳朵木眼睛HiFi啥的求求你饶了我吧我真听不出来。&lt;/p&gt;
+&lt;p&gt;这套教程非常折腾，除了便宜以外我想不到比正经蓝光碟机+功放+电视+一堆音箱搞出来的家庭影院好在哪里，但是作为一个穷的揭不开锅的小留来说我愿意拿时间换钱，只要核心体验到了其他体验多糟糕都没有问题，因为我真的很穷。&lt;/p&gt;
+&lt;p&gt;我在这里很厚脸皮的向诸位阅读者们请求借用一些蓝光设备，如果我有幸得到了您的青睐我会付双程邮费借用这台设备一段时间，我会抱着感激之心将评测写在之后的文档里。当然我不是专业人士表达能力一团浆糊自己还是AuDHD，但是我觉得至少我能以一个初学者，一个菜鸟的地步写下完全主观的评测。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;什么是杜比&#34;&gt;什么是杜比？
+&lt;/h2&gt;&lt;p&gt;杜比是美国杜比实验室的注册商标，杜比是一套视听技术的**专有的，商业化的，实用的，**解决方案。&lt;/p&gt;
+&lt;p&gt;一般来说杜比包括以下几个部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;音效：Dolby Atmos(杜比全景声)和Dolby Digital(杜比数字)。两者有根本上的区别。&lt;/li&gt;
+&lt;li&gt;显示：Dolby Vision(杜比视界)一套用来显示高色域，高动态范围的编解码和显示方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;咱们先从杜比视界开始&#34;&gt;咱们先从杜比视界开始。
+&lt;/h2&gt;&lt;p&gt;说到杜比视界，就要提到双层杜比，还有什么真假双层杜比的讨论，然后淘宝上一些商家就开始混淆视听来尝试卖给顾客一堆奇怪的东西，这里我们不谈定义不比谁更真，咱们就提杜比视界的实现原理。&lt;/p&gt;
+&lt;h3 id=&#34;yuv格式&#34;&gt;YUV格式
+&lt;/h3&gt;&lt;p&gt;电脑屏幕上的每个像素点是RGB的。通过三个光源的叠加来显示各种颜色。但是RGB颜色有个相当尴尬的问题：它把亮度和颜色混在了单一的一个值里。看以下的图片你就明白了：调整单一滑块时，右边的图颜色和亮度都变了，天哪！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/RGB4e8ecf2b23065d18.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;RGB4e8ecf2b23065d18.gif&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;导致在这个上面单独调整亮度（想一下HDR）相当折磨，此外人类对于颜色的感知能力远小于亮度，很多压缩就无法进行了。&lt;/p&gt;
+&lt;p&gt;于是我们发明了YUV格式。Y代表亮度，UV是连在一起的不可分离的二维量，代表一种颜色。在这个时候，黑色和白色会被看作一种“颜色”，它们之间的区别只有亮度。&lt;/p&gt;
+&lt;h4 id=&#34;yuv4&#34;&gt;YUV4:?:?
+&lt;/h4&gt;&lt;p&gt;当我们发明了亮度之后，我们就可以对图像进行大幅度的压缩，人类对于色彩的敏感度远小于亮度，所以我们如果在色彩上偷一点懒就能解锁大量的存储空间。&lt;/p&gt;
+&lt;p&gt;一个很容易想到的第一个思路是用全量的分辨率保存亮度，而用较小的分辨率保存颜色。到底多小呢？&lt;/p&gt;
+&lt;p&gt;我们考虑在显示器上的八个像素，它们如此排列：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们都留下它我们得到的就是&lt;code&gt;YUV444&lt;/code&gt;：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528054833985.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528054833985.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一个4代表了有4列像素，第二个数字是第一行保留了多少像素的颜色，第三个数字代表第二行保留了多少像素的颜色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那什么是&lt;code&gt;YUV422&lt;/code&gt;呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055103054.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055103054.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一行和第二行都只剩下了两个像素。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那什么是&lt;code&gt;YUV420&lt;/code&gt;呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055307657.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055307657.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;等一下，为什么第二行没有了？显示器上的像素该怎么来呢？我们只好把上面的两个像素的颜色顺延到底下就可以了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/image-20250528055601032.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250528055601032.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;色彩深度&#34;&gt;色彩深度
+&lt;/h4&gt;&lt;p&gt;YUV实际上还是一个三元组，第一个数字代表亮度，第二和第三个数字代表颜色。那我们该怎么表示这个数字呢？&lt;/p&gt;
+&lt;p&gt;我们实际上采用无符号整型类型来表示。但是这个整型有多长呢？颜色是连续的，我们只能用不同密度的离散的点来表示这些颜色，所以有多密呢？&lt;/p&gt;
+&lt;p&gt;这样我们就能得到了常跟在各种显示器参数或者视频格式后的&lt;code&gt;8bit&lt;/code&gt;,&lt;code&gt;10bit&lt;/code&gt;和&lt;code&gt;12bit&lt;/code&gt;。它们代表这个设备或者这个视频的色彩可以有多细腻，分的有多细。&lt;/p&gt;
+&lt;h3 id=&#34;所以到底啥是杜比视界&#34;&gt;所以到底啥是杜比视界？
+&lt;/h3&gt;&lt;p&gt;大家都说杜比视界里原盘的杜比视界是最好最完整的，那么它是什么呢？实际上它由三个部分组成：&lt;/p&gt;
+&lt;h4 id=&#34;bl层&#34;&gt;BL层
+&lt;/h4&gt;&lt;p&gt;BL层可以理解为视频本体，它是一个&lt;code&gt;YUV 4:2:0 10bit&lt;/code&gt;格式的视频，兼容&lt;code&gt;HDR10+&lt;/code&gt;，塞进蓝光光驱配好地区解锁就能直接播放，这一步不涉及任何蓝光碟机之类的，即使你把蓝光光驱塞进电脑里也能直接播放。&lt;/p&gt;
+&lt;h4 id=&#34;el层&#34;&gt;EL层
+&lt;/h4&gt;&lt;p&gt;这个EL层是对BL层数据的补充，你可以理解为上面的&lt;code&gt;YUV4:2:0&lt;/code&gt;格式中额外的两个颜色像素，然后对于每个颜色像素和亮度像素的额外两位数据，就像是在小数点后额外增加了几位一样，它能把&lt;code&gt;YUV4:2:0 10bit&lt;/code&gt;的视频扩展为&lt;code&gt;YUV 4:2:2 12bit&lt;/code&gt;,&lt;/p&gt;
+&lt;p&gt;杜比公司通过绑定在处理器中的授权阻止了未授权的处理器解码EL层数据，这也是大家都说蓝光碟机（比如麦尼塔UDP900）的杜比是最好的原因。它们的每一台设备都要对杜比实验室交授权费，或许是这类碟机价格高昂的原因之一。&lt;/p&gt;
+&lt;h4 id=&#34;rpu&#34;&gt;RPU
+&lt;/h4&gt;&lt;p&gt;杜比公司称其为动态元数据，这个元数据包含了在视频的每一帧该如何把YUV的颜色和亮度数据映射到实际的屏幕上。它描述了如何渲染BL（和EL）层。这个RPU层是杜比视界的代表，没有它就没法叫杜比视界。&lt;/p&gt;
+&lt;h4 id=&#34;原盘和流媒体&#34;&gt;原盘和流媒体
+&lt;/h4&gt;&lt;p&gt;在不同设备上播放的杜比视界需要不同的标准，以适应不同的硬件~~（和经济和市场）~~需求。我们此处假定视频以&lt;code&gt;H265/HEVC&lt;/code&gt;编码：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们把BL和EL和RPU加在一起，那么我们就得到了&lt;code&gt;Profile7&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由以上三个叠加出来的&lt;code&gt;Profile7&lt;/code&gt;由于包含了三个流所以说具有&lt;code&gt;FEL&lt;/code&gt;特性，一般来说我们用&lt;code&gt;FEL&lt;/code&gt;代指&lt;code&gt;Profile7&lt;/code&gt;。一般来说我们听到了类似真双层杜比的说辞一般指的是&lt;code&gt;FEL&lt;/code&gt;。由于其中包含&lt;code&gt;EL&lt;/code&gt;层所以只有那些拥有授权的蓝光碟机才能播放。这种封装也只会出现在蓝光原盘里。注意Profile7并没有限制具体的文件格式，可能是从原盘拆出来的BDMV文件夹也可能是一个MKV容器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果我们把BL和RPU加在一起，我们就得到了&lt;code&gt;Profile5/8&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;具体是哪个封装格式依据设定的向下兼容能力而定，我们通常叫这个&lt;code&gt;MEL&lt;/code&gt;，有的时候也叫单层杜比。有些时候有些商家会用“伪双层杜比”来描述一种特定的行为：即把&lt;code&gt;Profile7&lt;/code&gt;封装中的EL层扔掉只保留BL和RPU。目前已知会这么做的是英伟达的Shield TV，有时也称神盾播放器。有的时候&lt;code&gt;Profile8&lt;/code&gt;后面会跟小数点，它们更进一步指出了向下兼容的能力。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Profile5/8&lt;/code&gt;会在流媒体里面出现，一般来说B站，Netflix，Youtube上杜比视界的都属于这类。Apple TV,没有魔改的电视盒子也只能播放此类。有的时候有些支持杜比的NAS播放器会丢弃Profile7里的EL层数据。&lt;/p&gt;
+&lt;h2 id=&#34;音频&#34;&gt;音频
+&lt;/h2&gt;&lt;p&gt;在这里我们谈的杜比音频仅限于你在家里能买到的最好的东西。至于影院级的我们不谈。&lt;/p&gt;
+&lt;h3 id=&#34;音响系统&#34;&gt;音响系统
+&lt;/h3&gt;&lt;p&gt;目前最常用的音响系统是7.1，5.1声道。5.1声道包含电视左右的两个扬声器，电视下的一个扬声器，观众左右的两个扬声器和电视底下的一个重低音，而7.1声道多出了观众背后的两个扬声器。&lt;/p&gt;
+&lt;p&gt;杜比全景声和DTS:X引入了天空音响系统。天空音响至多有4个，所以说是7.1.4或者5.1.4系统。&lt;/p&gt;
+&lt;h3 id=&#34;ac3和truehd&#34;&gt;AC3和TrueHD
+&lt;/h3&gt;&lt;p&gt;杜比的声音编码就是这两种，解码的能力开放。前者诞生于上个世纪，后者诞生在最近十年。&lt;/p&gt;
+&lt;p&gt;AC3若不加任何修饰至多5.1声道，E-AC3扩展能让它扩展到7.1声道。&lt;/p&gt;
+&lt;p&gt;TrueHD和AC3的区别在于TrueHD是无损的，也能支持到7.1声道。&lt;/p&gt;
+&lt;p&gt;这些编码虽说是专有的，但是并不像FEL一样绑定特殊的硬件。&lt;/p&gt;
+&lt;h3 id=&#34;杜比全景声&#34;&gt;杜比全景声
+&lt;/h3&gt;&lt;p&gt;如果往以上的声音编码中增加关于描述声音具体访问的信息的元数据，那我们就得到了Dolby Atmos，它能通过软件形式的编码虚拟出给天空扬声器的声音来驱动7.1.4声道，让观众更有沉浸感。&lt;/p&gt;
+&lt;h2 id=&#34;实战篇&#34;&gt;实战篇
+&lt;/h2&gt;&lt;p&gt;理论讲完了，接下来是实际篇，这篇文章的标题是穷鬼们的杜比攻略，所以我绝对不想让你买蓝光机的。&lt;/p&gt;
+&lt;h3 id=&#34;百密一疏&#34;&gt;百密一疏
+&lt;/h3&gt;&lt;p&gt;理论上杜比树立的专利壁垒牢不可破，尤其是针对FEL的绑死硬件的解码能力。但是这个世界上总有草台班子。有不太可靠的野史指出：由于Amlogic（常见译名晶晨）的生产线混乱，导致几个型号的芯片里被错误置入了FEL的解码能力，于是在一群热心的黑客们从各类蓝光机，机顶盒中拆出来的驱动的缝合怪中，第一个支持FEL解码的非蓝光机设备出现了：Ugoos AM6B+，其内置的芯片是s922x-j，后来有人陆续发现其他的晶晨芯片里也有这个漏洞，其中一个就是S905x4-j/k。&lt;/p&gt;
+&lt;p&gt;s905x4-j/k的破解比S922X-J晚很多，考虑到s922x-j的破解实在震撼了太多人，那些搭载该芯片的电视盒子价格飞升奇快无比，一开始的价格大概在450人民币左右，现在已经飞到了800甚至1k人民币。但是s905x4-j的电视盒子破解的太晚再加上本身中文圈子里的保有量太少没有得到什么关注，于是价格仍然没有什么起伏。&lt;/p&gt;
+&lt;p&gt;但是在前仆后继的网友的挖地三尺下还真捞出来这么一台设备，腾讯的极光盒子4Pro,不是5不是3不是4必须要是那个4Pro，采用s905x4-j处理器。支持u盘启动，有SPDIF输出和CEC遥控，一个USB2.0和一个3.0口，还支持HDMI2.1输出。&lt;/p&gt;
+&lt;p&gt;最重要的是在我在家当死肥宅撰写这篇文章的2025年5月28号，这台设备只卖350人民币。虽说如此这设备的兼容性一场灾难，除了CoreELEC系统支持一团糟以外遥控器，Wi-Fi，蓝牙支持全废了，并且还没办法刷机只能USB启动，但是它只卖350人民币啊！你还要啥自行车？&lt;/p&gt;
+&lt;h3 id=&#34;紧急救援&#34;&gt;紧急救援
+&lt;/h3&gt;&lt;p&gt;这些缺点还蛮烦人的，第一是遥控器，我个人是直接把PS5手柄接上去了，我个人建议你买一个廉价的无线USB Xbox手柄接上去，包能用的。在这里顺道吐槽一下，某些蓝光机的遥控器简直就像是驾驶超音速奶牛一样难用。而至于Wi-Fi和蓝牙。这个设备上有个千兆网口，然后你既然都来追求极致音效了为什么要用蓝牙呢？&lt;/p&gt;
+&lt;p&gt;如果你决定好要购买它，记得配一个好的U盘，读写速度差的U盘会直接导致系统反复卡死无响应，甚至直接黑屏。笔者的方案是买了个16G的傲腾塞进了U盘盒子里。至于速度？我没有测过但是这能用。咸鱼上有些店家会提前把芯片拆下来用烧录器刷好系统，虽然能启动但不保证能用。&lt;/p&gt;
+&lt;p&gt;现在停下来，如果你决定好了购买了，停止阅读，去买一个，等快递到了再读下半部分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;刷机不要晚上做除非想通宵&#34;&gt;刷机（不要晚上做除非想通宵）
+&lt;/h3&gt;&lt;p&gt;把U盘塞进电脑里，去装一个烧写工具比如Balena Etcher或者Rufus。从&lt;a class=&#34;link&#34; href=&#34;https://mega.nz/file/zMk2HYZa#cM_6ornJwNnUG8OmXSAk2mrp6oGJlyQ2bDaQlzdrjGc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;（感谢卡巴熊论坛封装）下载固件，然后再&lt;a class=&#34;link&#34; href=&#34;https://www.123865.com/s/QH32Td-1yKov&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载&lt;/a&gt;一个这个设备的设备树（抱歉，没有钱来买免登录流量包）。把固件用Rufus烧录进U盘里，然后插拔U盘就能看到电脑上出现了新的U盘分区。把根文件夹目录下的&lt;code&gt;dtb.img&lt;/code&gt;删掉，替换成我给出的设备树文件。这样，系统盘就做好了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.pterclub.com/images/2025/05/28/IMG_20250528_1126062.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IMG_20250528_1126062.jpg&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;把系统盘插进盒子的USB3.0口里，找一个足够长的针（不要用牙签，除非你想让它断掉拿不出来），捅进盒子的AV口里（不用担心搞坏掉，你大概用不到这个口了），然后插上网线和HDMI线还有键盘，轻轻试探针，你会感觉到一个按钮，保持它按下的同时插入电源线，直到屏幕上显示CoreELEC的logo就可以松开了。&lt;/p&gt;
+&lt;p&gt;第一次启动要等很久很久很久，你需要耐心等待，如果你的U盘不好，你有可能永远卡在这个阶段。然后进入系统之后直奔设置：系统：CoreELEC：你就能见到杜比选项了。这个系统搭载了CPM模块，能在显示设备不支持杜比的时候手动设置显示屏数据以已经完成了RPU色调映射的LLDV模式播放杜比视界，只需要把模式选择成Player LED即可。&lt;/p&gt;
+&lt;p&gt;挂载你NAS(什么？你都玩PT折腾家庭影院了还没有NAS？太强大了受我一拜)上的文件夹之后选择刷新即可，受系统和U盘限制，挂载之后刷新文件夹需要耗上很长一段时间，甚至有可能假死，但是只要刷新完了就可以了。&lt;/p&gt;
+&lt;p&gt;它可以播放常见的蓝光原盘文件，甚至是ISO格式的，可惜没有蓝光菜单（有人在攻关这个难题）。比起蓝光碟机硬盘播放器来说它支持读取NFO生成影片介绍，是难得的优势。&lt;/p&gt;
+&lt;h3 id=&#34;测试&#34;&gt;测试
+&lt;/h3&gt;&lt;p&gt;网上有一个&lt;code&gt;BL_EL.mkv&lt;/code&gt;文件，搜到之后可以试着用它播放一下，看不到杜比标也没关系，看完它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你能看见旋转的色彩：那么证明它能读取BL层&lt;/li&gt;
+&lt;li&gt;如果你能看见隐隐约约的模糊电影：那么证明它能解码EL层（不要用采集卡，你看不到的）。电影很不清晰，有些人感觉不到可以注意四周的边框。&lt;/li&gt;
+&lt;li&gt;如果你发觉色彩开始爆闪开始鬼畜：那么证明它能读取并正确处理RPU。（别担心，多鬼畜的爆闪都是正常的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个文件的原理是这样的：先生成一段旋转的色彩，再提取一段原盘电影的EL层覆盖上去，再故意生成了一个很鬼畜的RPU数据，然后把它们缝在一起生成了这段测试视频。&lt;/p&gt;
+&lt;h3 id=&#34;遗憾音效&#34;&gt;遗憾：音效
+&lt;/h3&gt;&lt;p&gt;想要杜比全景声需要7+1+4个音频线，但是这个设备上显然没有这类接口，你需要一个相当昂贵的功放。如果你只需要5.1环绕声倒是有类似的廉价功放，只需要几十几百块。&lt;/p&gt;
+&lt;p&gt;如果你购买了类似的设备，你需要在音频选项中开启直通模式，把这些数据直通给设备。可以选择通过HDMI或者通过S/PDIF接口，如果你想搞7.1.4杜比全景声的话只能使用HDMI接口了。看看你的电视支不支持eARC或者买一个HDMI分离器，这种东西不算贵，但是记得搞一个支持杜比全景声的。&lt;/p&gt;
+&lt;h2 id=&#34;结语我们真的需要走那么远吗&#34;&gt;结语：我们真的需要走那么远吗？
+&lt;/h2&gt;&lt;p&gt;如果你跟着我走到了这里，你大概已经拥有了一台堪比蓝光碟机的播放设备。你或许还想进一步往前走。我可以负责任的跟你说：这套系统的上线，若不计算神奇的玄学部分，和最高配的蓝光碟机和功放的组合同级。当然你还可以接着走下去，花上更多的时间翻阅资料查询各类设备的价格，甚至跟我一样开始读源代码编译固件，甚至制作一台开源硬件的7.1.4功放。大家都是发烧友，只不过咱们没那么花钱而已。&lt;/p&gt;
+&lt;p&gt;但是时间成本很重要，你也会有一天愿意搭建一台家庭影院，虽说这台设备很强大，但是它基本上并不怎么好用的CoreELEC系统也会让你大倒胃口，你或许愿意花上一些钱买下UDP900，只是觉得这台设备有专业性和保障，不需要那么多麻烦。&lt;/p&gt;
+&lt;p&gt;或许再退一步，或许有一天会发现缺了EL层的杜比视界居然也看不出来，然后彻底不再发烧。&lt;/p&gt;
+&lt;p&gt;祝大家玩的开心，折腾的爽。&lt;/p&gt;
+&lt;p&gt;这篇文章采用CC0协议发布，你可以自由处置该文章。话虽如此，我个人方面请求你尽量不要把它发到PT站论坛之外的地方。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Android刷机杂谈</title>
+        <link>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Wed, 25 Jun 2025 02:56:58 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;img src="https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/cover.webp" alt="Featured image of post Android刷机杂谈" /&gt;&lt;blockquote&gt;
+&lt;p&gt;这篇文章假定你已经会了以下的东西：基本的使用&lt;code&gt;adb sideload&lt;/code&gt;或者&lt;code&gt; fastboot update&lt;/code&gt;来刷机，知道什么是Custom Recovery以及对于第三方系统的基本了解。十分建议阅读一下Yuki写的&lt;a class=&#34;link&#34; href=&#34;https://obsp.de/p/moto-g53-penang-flashing-evolutionx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;刷机教程&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;android系统如何启动&#34;&gt;Android系统如何启动
+&lt;/h2&gt;&lt;p&gt;笔者的知识仅限于高通设备，不过MediaTek的设备大同小异。&lt;/p&gt;
+&lt;h3 id=&#34;安全信任链&#34;&gt;安全信任链
+&lt;/h3&gt;&lt;p&gt;移动设备通常被视为“更安全”，主要原因是被强制执行的安全启动，让设备只能加载被信任的程序。程序这个定义其实相当宽泛，从 Android APP，到 Android 系统，到用来启动 Android 系统的二进制文件都可以被算成“程序”。作为邪恶的 Google 和版权律师，你希望以安全的名义保证运行的系统是经过验证的，不该有&lt;code&gt;su&lt;/code&gt;之类不该出现的东西，应用程序就该跑在完全的沙盒里等等。所以你需要和硬件厂商联合，阻止玩家们对系统进行不必要的修改，但是你又需要放过自己，让自己可以对系统进行更新.&lt;/p&gt;
+&lt;h4 id=&#34;soc-和-secure-boot&#34;&gt;SoC 和 Secure Boot
+&lt;/h4&gt;&lt;p&gt;我们要介绍的第一个概念是Fuse，这个大家称之为熔丝，是早期硬件设备的只读存储设备PROM的存储数据的方法，就是字面意思的导电丝，写入数据的方式是直接用高电流烧断保险丝，这个名字一直流传到了现在，于是我们叫往芯片写入程序的过程为烧录或者Burn。这个过程很显然是不可逆的，即被烧断的保险丝不能复原。&lt;/p&gt;
+&lt;p&gt;在现代的SoC里，CPU内部也被设置了Fuse，当然烧断熔丝的过程实在太没道理，于是我们用硬件设计来保证Fuse永不复位，这个就被称作eFuse。SoC本身的eFuse里存放了公钥和是否启动Secureboot的标志位，在上电开机的时候，在SoC里出厂即固化在SoC里的一段只读区域的的Primary Bootloader(PBL) 会以这个公钥验证下一步要加载的XBL(eXtensible Bootloader)的合法性，同时Qualcomm EDL(有的时候也被称作9008)也发生在这个阶段。PBL会去检查主板短接，USB短接或者音量键等等，来检查是否要进行EDL。&lt;/p&gt;
+&lt;h4 id=&#34;从-pbl-到-abl&#34;&gt;从 PBL 到 ABL
+&lt;/h4&gt;&lt;p&gt;XBL存储在设备的存储空间中，它负责以一种比写死在SoC里的PBL更灵活的方式管理开机过程。它也存储下一步ABL(Android Bootloader)的公钥，当验证ABL无误之后，它就会开始正式启动Android。有的时候ABL也被称作&lt;code&gt;fastboot&lt;/code&gt;，主要是ABL里装载了接受&lt;code&gt;fastboot&lt;/code&gt;命令的模式，当你在系统里执行&lt;code&gt;adb reboot bootloader&lt;/code&gt;之后就会进入ABL主导的&lt;code&gt;fastboot&lt;/code&gt;模式。&lt;/p&gt;
+&lt;h4 id=&#34;所以到底什么是bl锁&#34;&gt;所以到底什么是BL锁？
+&lt;/h4&gt;&lt;p&gt;实际上的BL锁在ABL里，或者说，由ABL管理。BL锁是否启用的标志位在处理器中可擦写的存储空间（类似EEPROM）中。ABL会验证vbmeta分区的签名，只有当这个签名与ABL里的厂商公钥符合才允许启动。当BL锁被解锁的时候，vbmeta的签名仍然存在，但是ABL不会管这个签名是否是设备厂商的了。&lt;/p&gt;
+&lt;h4 id=&#34;解锁bl锁的原理是什么&#34;&gt;解锁BL锁的原理是什么？
+&lt;/h4&gt;&lt;p&gt;小米之类厂商的ABL允许在&lt;code&gt;fastboot&lt;/code&gt;模式中执行&lt;code&gt;oem unlock&lt;/code&gt;命令，当然为了限制用户这个命令大多会被魔改，比如需要服务器下发的允许解锁命令等等，但是终归还是可以解锁的。在一切验证之后，ABL会把验BL位翻转，代表已经解锁完成了。之后vbmeta分区的合法性就不会被ABL验证了。&lt;/p&gt;
+&lt;p&gt;这个BL锁的标志位不管对于任何设备都是存在的，但是很多设备的ABL根本不会允许解锁——意味着当ABL发现BL解锁的标志位已经打开之后就直接拒绝启动。很显然这种设备的ABL里也根本不会实现这种命令。但是厂商总要开发并测试设备的系统更新，于是厂商会准备开发机并单独准备一个这个开发机的ABL（类似笔者使用的Nubia Z60u aka NX721J），这个ABL允许解锁bootloader。在一切绝佳的情况下如果这个开发机不泄露就无人能解锁这个手机…但是很显然某些人缺钱或者单纯的草台班子。&lt;/p&gt;
+&lt;p&gt;在这种设备的开发机流出以后，它会被迅速dump整个闪存并提取出&lt;code&gt;abl.img&lt;/code&gt;镜像，由于这个ABL镜像有来自厂商的签名所以它能通过XBL的校验，但同时它又实现了BL解锁的功能。于是我们就破解了曾经被ZTE官方闪烁其词不让破解的Nubia Z60u，有传言称z60u的一个变体产品被中国政界采用并签下了严令不可解锁的合同，但是好端端根正苗红的国企总有人草台班子了，笔者猜测中兴要亏麻了。&lt;/p&gt;
+&lt;h4 id=&#34;把soc卸下来&#34;&gt;把SoC卸下来
+&lt;/h4&gt;&lt;p&gt;在某些最极端的情况下完全没有办法解锁BL，但是在那些不计一切代价的情况下可以拆开手机安装一个新的SoC，然后提取同SoC其他手机的XBL和ABL替换，但是注意XBL在第一次启动如果检测到secureboot没有开启则会自动写入并且启用Secureboot，如果你没有把闪存一起热风枪吹下来来写入XBL和ABL的话——恭喜你你又报销了一块SoC。这当然是一种合理但是代价可怕的解锁手机BL的办法，但在像是小米高考的情况下相比高昂的内部解锁费用买一块SoC反而没那么贵了。&lt;/p&gt;
+&lt;h2 id=&#34;dm-verity-从小白到bootloop&#34;&gt;dm-verity 从小白到Bootloop
+&lt;/h2&gt;&lt;p&gt;我特别要写下这一章，主要原因是因为现在刷ROM的难度已经降低了很多，一些东西被封装的非常好，导致很多萌新在迈向Maintainer之路的时候撞了个头破血流（指我自己）。&lt;/p&gt;
+&lt;p&gt;以上验证流程只从开始到ABL本身，执行到ABL之后之后的安全启动信任链就要交由dm-verity。这部分是由ABL验证的init_boot分区执行下一步，它会验证boot分区，recovery分区，还有system分区。验证需要的公钥等存放在vbmeta分区中。vbmeta分区本身也是由ABL验证的。&lt;/p&gt;
+&lt;p&gt;解锁Bootloader会解除ABL对vbmeta,init_boot的强制符合制造商证书的要求，也就是你可以修补init_boot来刷入magisk或者KernelSU了。但是如果你想进一步修改其他分区，例如recovery，boot，vendor又没有禁用dm-verity，则会触发bootloop。&lt;/p&gt;
+&lt;p&gt;KernelSU和magisk都提供了一种类似overlayfs的方式（即不直接修改这些受保护分区，而是使用一种特殊的文件系统来间接完成这一点）来修改，于是就诞生了Magisk和KernelSU的模块系统。这些模块告诉KernelSU和Magisk该在启动时如何注入修改，由于我们并没有实际上碰分区本身则不会触发Bootloop。&lt;/p&gt;
+&lt;p&gt;在一些极端的情况下，例如使用第三方twrp或者刷入整个第三方rom，像是小米MIX4的TWRP recovery会先让你使用fastboot boot twrp.img来临时启动这个img,然后在recovery内安装，这个过程会修改vbmeta的数据，使其符合recovery分区的摘要。而刷入第三方ROM的时候ROM附带整个vbmeta.img，它已经由ROM维护者的证书签名并把数据恰当的放进了vbmeta分区内，所以也不会bootloop。&lt;/p&gt;
+&lt;p&gt;笔者写下这一章的主要原因是记录一段时间以前试着自编译Z60U的TWRP的时候recovery的问题，这个手机的fastboot并不支持boot命令，于是毫不意外的需要直接刷写。于是毫不意外的变砖了。于是我学到了教训，需要手动修改vbmeta分区禁用dm-verity。实际上adb甚至有一条命令来完成这一点：&lt;code&gt;fastboot flash --disable-verity --disable-verification vbmeta vbmeta.img&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tee和play-integrity&#34;&gt;TEE和Play-integrity
+&lt;/h2&gt;&lt;p&gt;这一部分其实是临时追加的，主要原因是谷歌这段时间来的一大堆政策变动和各大内容提供商（Netflix）的一些更改，导致这一部分就临时起意追加进来了。&lt;/p&gt;
+&lt;h3 id=&#34;安全&#34;&gt;安全？
+&lt;/h3&gt;&lt;p&gt;TEE是Trusted Execution Environment的简写，它是处理器中单独的一块区域或者就是单独的一块芯片，具有存储能力和无视权限的直接阅读设备闪存的能力，由于它访问设备闪存和eFuse使用单独的通道，用户、Android系统、Linux内核都无法干预或者篡改它的阅读过程。&lt;/p&gt;
+&lt;p&gt;TEE内存储着一个密钥，这个密钥永远不离开TEE且没法通过常规方法取出（直接上显微镜之类不计一切成本的方法除外）。这个密钥没有官方名字，不过大家都叫它Keybox。这个Keybox守护着例如用来解密data分区的密钥，你的指纹数据等等，在理论上Android在启用了它之后就变得非常安全了。在解锁bootloader之后TEE当然会继续工作，当然它也会读到解锁状态。&lt;/p&gt;
+&lt;h3 id=&#34;从magisk-hide开始的猫抓老鼠&#34;&gt;从Magisk-Hide开始的猫抓老鼠
+&lt;/h3&gt;&lt;p&gt;各类银行APP在知道了手机具有Root权限之后会直接停止运行，并且抛出设备不安全等提示，于是各种Root方案就开始试图阻止这些APP获知设备已经被root的事实。&lt;/p&gt;
+&lt;p&gt;一开始的思路是直接在对应应用试图探测&lt;code&gt;su&lt;/code&gt;之后回答&lt;code&gt;su&lt;/code&gt;不存在，后来演变成对应各种其他迹象的伪造，等等。各种APP也会试图通过探测应用列表来寻找对应的软件，比如Kernelsu Client, Magisk Manager, LSPosed Manager等等，当然既然有了root权限，可以直接注入探测软件的行为来阻止这一点。之后的行为变成了Google对Magisk作者以高薪水进行的招安，于是Magisk-Hide就EOL了。&lt;/p&gt;
+&lt;p&gt;但是战斗并没有停止，这些银行没有一个实在紧迫的原因阻止用户root(毕竟如果设备被入侵了损失的还是用户自己)。但是最大的威胁来自于各种流媒体提供商：如果在手机上播放的内容被dump下来，盗版的损失可就不计其数了。但是这个事情实在反直觉：毕竟既然要在用户的设备屏幕上放，那怎么阻止未经授权的转录呢？我们该如何寻找一种行之有效的方法，绝对断定用户的设备有没有遭篡改呢？既然用户的设备已经root，用户可以基于用户知道的东西伪造任何一条请求。所以我们需要让用户的设备提供一种用户自己不知道，但是用户的设备知道的信息。&lt;/p&gt;
+&lt;p&gt;于是Play-integrity诞生了，在TEE之内存在的私钥和证书由厂商经过Google授权签发。Play-integrity是Google服务器对设备TEE的一种挑战：要求它查询设备有没有被篡改，并且用由Google签发的证书和私钥来证明自己的真实性。真实性的验证不发生在设备上，而是服务器上。这样，KernelSU用尽浑身解数都无法获取这个硬件上隔离的证书和私钥，由于TEE的硬件级权限又无法阻止TEE获取信息。理论上就无敌了。&lt;/p&gt;
+&lt;p&gt;可是&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637.png&#34;
+	width=&#34;1362&#34;
+	height=&#34;112&#34;
+	srcset=&#34;https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_99f9b4c2295e85e5.png 480w, https://blog.minutesphinx.link/p/android%E5%88%B7%E6%9C%BA%E6%9D%82%E8%B0%88/image-20250628123256637_hu_4375901c12f75cc2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250628123256637&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1216&#34;
+		data-flex-basis=&#34;2918px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这套系统里最不安全的还是人。&lt;/p&gt;
+&lt;p&gt;很难说这是宿命还是偶然，这些Keybox会以各种各样奇奇怪怪的方式流出，这套证书和私钥是TEE保证自己的信息不被篡改的唯一优势，这些证书和私钥可能来自于设备厂商的无意有意泄露，也可能来自于有严重硬件漏洞的设备，总之当这些东西泄露后，TEE可以被轻易伪造，这就是PlayintegrityFix这类模块干的事情。当然谷歌也能预料掉这一点，于是它不断更新被吊销的密钥列表。但是可以想见，新的密钥仍然源源不断流出。&lt;/p&gt;
+&lt;p&gt;Play integrity 分三种，不过现在Google的政策来说三种Integrity是一样的，分别是Basic integrity,Device integrity, Strong Integrity。如果你在安装了Kernelsu的设备上安装了play integrityfix和Tricky Store,那你就能在root的设备通过Netflix，香港八达通，Authy之类的认证。&lt;/p&gt;
+&lt;p&gt;咸鱼上有卖Keybox的。&lt;/p&gt;
+&lt;p&gt;完&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>你好世界</title>
+        <link>https://blog.minutesphinx.link/p/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</link>
+        <pubDate>Tue, 24 Jun 2025 11:12:40 +0800</pubDate>
+        
+        <guid>https://blog.minutesphinx.link/p/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C/</guid>
+        <description>&lt;h1 id=&#34;关于博客&#34;&gt;关于博客
+&lt;/h1&gt;&lt;p&gt;在摇摇晃晃的写了很多很多文档之后，终于决定以后把自己写的文章都丢进博客里。&lt;/p&gt;
+&lt;p&gt;其实之前也不是没有过博客，但是主要问题是始终做不到持之以恒，最后文章丢的丢博客还没人看，服务器从WordPress到Ghost搭建假设玩到飞起最后博客没写多少，然后被家长push花了不少电费于是陷入持之以恒的焦虑中，就这样就荒废了。&lt;/p&gt;
+&lt;p&gt;但是Yuki出现了。某种意义上ta重新点燃了我写下点什么东西的热情，于是这篇文章和背后的博客就诞生了。急急忙忙买了域名就开始把自己之前写下的东西搬上来，最后发现自己写过的东西Yuki都写过一遍了，于是这里我会写点其他什么东西（嗯）。&lt;/p&gt;
+&lt;p&gt;总之对Yuki的感谢难以言表（嗯）。&lt;/p&gt;
+</description>
+        </item>
         
     </channel>
 </rss>
