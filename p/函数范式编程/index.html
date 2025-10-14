@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n">
 <title>函数范式编程</title>
 
-<link rel='canonical' href='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
+<link rel='canonical' href='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="函数范式编程">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="函数范式编程">
 <meta property='og:description' content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n">
-<meta property='og:url' content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
+<meta property='og:url' content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/'>
 <meta property='og:site_name' content='MS工坊'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='WIP' /><meta property='article:tag' content='大部头' /><meta property='article:published_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='article:modified_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='og:image' content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='WIP' /><meta property='article:tag' content='大部头' /><meta property='article:published_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='article:modified_time' content='2025-06-30T07:49:15&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
 <meta name="twitter:title" content="函数范式编程">
 <meta name="twitter:description" content=" 我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解\n从计算机发展史看编程范式 计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于工程实践的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
+    <meta name="twitter:image" content='http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -59,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu10029839799820149340.png" width="300"
+                        <img src="/img/avatar_hu_b3a9a1a34ae21778.png" width="300"
                             height="309" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -180,39 +180,6 @@ category: Badges
             
         </ol><ol class="menu" id="main-menu">
         
-        
-        
-        <li >
-            <a href='/' >
-                
-                
-                
-                    <!--
-category: Buildings
-tags: [house, dashboard, living, building]
-version: "1.0"
-unicode: "eac1"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-                
-                <span>主页</span>
-            </a>
-        </li>
         
         
         <li >
@@ -360,9 +327,9 @@ unicode: "ebbe"
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blog.minutesphinx.link/en/" >English</option>
+                                    <option value="http://localhost:1313/en/" >English</option>
                                 
-                                    <option value="https://blog.minutesphinx.link/" selected>中文</option>
+                                    <option value="http://localhost:1313/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -472,8 +439,8 @@ unicode: "eabc"
     <header class="article-header">
         <div class="article-image">
             <a href="/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/">
-                <img src="/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu4603007999638541254.webp"
-                        srcset="/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu4603007999638541254.webp 800w, /p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu9367752189311261660.webp 1600w"
+                <img src="/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu_e2303559d20aaeb3.webp"
+                        srcset="/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu_e2303559d20aaeb3.webp 800w, /p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover_hu_e9ff1eac8c0690c1.webp 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
@@ -562,8 +529,7 @@ unicode: "ea70"
     
     
     <blockquote>
-<p>我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解</p>
-</blockquote>
+<p>我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解</p></blockquote>
 <h2 id="从计算机发展史看编程范式">从计算机发展史看编程范式
 </h2><p>计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于<strong>工程实践</strong>的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。</p>
 <p>随着计算机从一群科学家的狂欢变成更实用，更加商业化的东西，我们发明了编译器，我们可以通过一些更说人话的方法编写程序。所以我们有了Fortran和COBOL(出于美国政府的厕所管理员和火星人的邪恶交易的原因，这个语言还在银行系统里使用，实在是太邪恶了)，此时的编程语言基本上就是对于硬件的抽象描述（不再是字面描述了）和一大堆语法糖的混合。我们也第一次获得了一种不再是处理器特定的，<em>把人类思路转换为编程思路的方法</em>，这个描述可能有点晦涩，不过请尽量理解其意思。</p>
@@ -814,7 +780,7 @@ unicode: "ea7b"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.adcc9c491529af1b4acc32b9843e9aa4a1e70161014f9055f686bd842274cf68.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

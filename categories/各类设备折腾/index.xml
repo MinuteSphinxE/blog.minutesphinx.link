@@ -2,24 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>各类设备折腾 on MS工坊</title>
-        <link>https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/</link>
+        <link>http://localhost:1313/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/</link>
         <description>Recent content in 各类设备折腾 on MS工坊</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>by MinuteSphinx CC0</copyright>
-        <lastBuildDate>Fri, 27 Jun 2025 14:08:27 +0800</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Jun 2025 14:08:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%90%84%E7%B1%BB%E8%AE%BE%E5%A4%87%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>杜比视界杂谈</title>
-        <link>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</link>
+        <link>http://localhost:1313/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</link>
         <pubDate>Fri, 27 Jun 2025 14:08:27 +0800</pubDate>
         
-        <guid>https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</guid>
-        <description>&lt;img src="https://blog.minutesphinx.link/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/cover.jpg" alt="Featured image of post 杜比视界杂谈" /&gt;&lt;blockquote&gt;
+        <guid>http://localhost:1313/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E6%9D%9C%E6%AF%94%E8%A7%86%E7%95%8C%E6%9D%82%E8%B0%88/cover.jpg" alt="Featured image of post 杜比视界杂谈" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;这是一篇来自于作者之前在其他地方写下文章的搬运，以Legacy Tag标出。这篇文章最初发表于猫站（这是一个刻意写出的简称）。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;作者是一名目前正在gap的学生，金钱不多所以说是穷鬼们的。这套教程完全出于我在近三个月里摸爬滚打的半实战经验。可能有错漏之处敬请谅解。要是你反对我会哭然后在家门口抹眼泪上吊并且不会让你知道😢&lt;/p&gt;
 &lt;p&gt;此外我本人对于颜色，亮度，声音的敏感度不高，杜比的元数据是基本上没有对比看不出来的，所以说我是木耳朵木眼睛HiFi啥的求求你饶了我吧我真听不出来。&lt;/p&gt;
 &lt;p&gt;这套教程非常折腾，除了便宜以外我想不到比正经蓝光碟机+功放+电视+一堆音箱搞出来的家庭影院好在哪里，但是作为一个穷的揭不开锅的小留来说我愿意拿时间换钱，只要核心体验到了其他体验多糟糕都没有问题，因为我真的很穷。&lt;/p&gt;
-&lt;p&gt;我在这里很厚脸皮的向诸位阅读者们请求借用一些蓝光设备，如果我有幸得到了您的青睐我会付双程邮费借用这台设备一段时间，我会抱着感激之心将评测写在之后的文档里。当然我不是专业人士表达能力一团浆糊自己还是AuDHD，但是我觉得至少我能以一个初学者，一个菜鸟的地步写下完全主观的评测。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;我在这里很厚脸皮的向诸位阅读者们请求借用一些蓝光设备，如果我有幸得到了您的青睐我会付双程邮费借用这台设备一段时间，我会抱着感激之心将评测写在之后的文档里。当然我不是专业人士表达能力一团浆糊自己还是AuDHD，但是我觉得至少我能以一个初学者，一个菜鸟的地步写下完全主观的评测。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;什么是杜比&#34;&gt;什么是杜比？
 &lt;/h2&gt;&lt;p&gt;杜比是美国杜比实验室的注册商标，杜比是一套视听技术的**专有的，商业化的，实用的，**解决方案。&lt;/p&gt;
 &lt;p&gt;一般来说杜比包括以下几个部分：&lt;/p&gt;

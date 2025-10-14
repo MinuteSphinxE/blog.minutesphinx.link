@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>理论与实践 on MS工坊</title>
-        <link>https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+        <link>http://localhost:1313/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
         <description>Recent content in 理论与实践 on MS工坊</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>by MinuteSphinx CC0</copyright>
-        <lastBuildDate>Wed, 06 Aug 2025 12:43:13 +0200</lastBuildDate><atom:link href="https://blog.minutesphinx.link/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Aug 2025 12:43:13 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>从LaTeX到声明式</title>
-        <link>https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</link>
+        <link>http://localhost:1313/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</link>
         <pubDate>Wed, 06 Aug 2025 12:43:13 +0200</pubDate>
         
-        <guid>https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</guid>
+        <guid>http://localhost:1313/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/</guid>
         <description>&lt;h2 id=&#34;所见即所得&#34;&gt;所见即所得
 &lt;/h2&gt;&lt;p&gt;我们已经习惯了使用MS Word类似的操作逻辑来编写具有复杂排版的文档。假设我们要编写一张贺卡，祝你的朋友生日快乐，从一篇空文档开始，我们干的事情大概如下：&lt;/p&gt;
 &lt;ol&gt;
@@ -23,10 +23,10 @@
 &lt;li&gt;&amp;hellip;&amp;hellip;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;这种操作逻辑我们已经习以为常，从我们日常使用的MS Word，到Adobe InDesign之类的专业排版工具我们一直都在使用。这种操作逻辑有一个显而易见的优势：易于理解，我们把做的事情一步步写下来，然后按照顺序向软件发送命令，顺序很重要不能颠倒&amp;hellip;.等等。实际上这种操作逻辑有一个名字：命令式。我们把做一件事情的方法按照步骤写下来，按照顺序执行。这种编码方式深入人心，我们用它制作了相当多的卓越并且令人惊叹的排版作品：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency.png&#34;
 	width=&#34;794&#34;
 	height=&#34;613&#34;
-	srcset=&#34;https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu14332488341177252511.png 480w, https://blog.minutesphinx.link/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu10236148143314019672.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu_78f83dd4231768f9.png 480w, http://localhost:1313/p/%E4%BB%8Elatex%E5%88%B0%E5%A3%B0%E6%98%8E%E5%BC%8F/agency_hu_77e12fd13c02c034.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;这真的很好看&#34;
@@ -50,13 +50,12 @@
         </item>
         <item>
         <title>函数范式编程</title>
-        <link>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+        <link>http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
         <pubDate>Mon, 30 Jun 2025 07:49:15 +0800</pubDate>
         
-        <guid>https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
-        <description>&lt;img src="https://blog.minutesphinx.link/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp" alt="Featured image of post 函数范式编程" /&gt;&lt;blockquote&gt;
-&lt;p&gt;我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解&lt;/p&gt;
-&lt;/blockquote&gt;
+        <guid>http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E5%87%BD%E6%95%B0%E8%8C%83%E5%BC%8F%E7%BC%96%E7%A8%8B/cover.webp" alt="Featured image of post 函数范式编程" /&gt;&lt;blockquote&gt;
+&lt;p&gt;我本身也是第一次学习函数式编程，很多在这个文章里描写的东西可能有误，不过都出于我个人对此的了解&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;从计算机发展史看编程范式&#34;&gt;从计算机发展史看编程范式
 &lt;/h2&gt;&lt;p&gt;计算机的发展越来越进步，我们能用计算机干的事情也越来越多，我们一开始直接编写机器码，我们设计了冯·诺依曼架构，并且基于这个规定了一套汇编语言，汇编语言是基于&lt;strong&gt;工程实践&lt;/strong&gt;的对于硬件的字面描述，当我们要求助计算机完成人类无法完成任务的时候，我们分析我们的任务，把它从人类的思路转换为处理器的思路，然后我们直接操作处理器，操作寄存器，操作内存，直接阅读和写入IO来完成任务。&lt;/p&gt;
 &lt;p&gt;随着计算机从一群科学家的狂欢变成更实用，更加商业化的东西，我们发明了编译器，我们可以通过一些更说人话的方法编写程序。所以我们有了Fortran和COBOL(出于美国政府的厕所管理员和火星人的邪恶交易的原因，这个语言还在银行系统里使用，实在是太邪恶了)，此时的编程语言基本上就是对于硬件的抽象描述（不再是字面描述了）和一大堆语法糖的混合。我们也第一次获得了一种不再是处理器特定的，&lt;em&gt;把人类思路转换为编程思路的方法&lt;/em&gt;，这个描述可能有点晦涩，不过请尽量理解其意思。&lt;/p&gt;
